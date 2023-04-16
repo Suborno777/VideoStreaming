@@ -1,0 +1,985 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 150vh;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(20,20,20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    transition: opacity .5s;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #fff; */
+    /* border-radius: 40px; */
+    overflow: hidden;
+    /* box-shadow: 0px 5px 25px -8px #000; */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    z-index: -1;
+}
+header::after {
+    content: '';
+    position: absolute;
+    /* width: 100%;
+    height: 100%; */
+    background: linear-gradient(180deg, transparent, #000);
+    z-index: -1;
+}
+
+
+
+header video {
+    position: absolute;
+    width: 120%;
+    height: 200%;
+    top: -70%;
+    right: 0;
+    z-index: -3;
+}
+header .show_image {
+    background-position: 50%;
+    background-size: cover;
+    bottom: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: alpha(opacity=100);
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .4s cubic-bezier(.665,.235,.265,.8) 0s;
+    width: 100%;
+    z-index: -999;
+}
+
+header .videovignette {
+    background: linear-gradient(77deg,#000,transparent 85%);
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 26.09%;
+    top: 0;
+    transition: opacity .5s;
+}
+header .vignette-layer {
+    background-color: transparent;
+    background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+    /* background-position: 100 bottom; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    bottom: 440px;
+    height: 14.7vw;
+    opacity: 1;
+    top: auto;
+    width: 100%;
+    z-index: 2;
+}
+
+header nav {
+    position: fixed;
+    width: 100%;
+    height: 7%;
+    background: transparent;
+    top: 0;
+    /* border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    transition: background-color 0.4s ease-in-out;
+    z-index: 99;
+}
+
+.vignette {
+    position: fixed;
+    width: 101%;
+    height: 7%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    padding: 0px 50px;
+    background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+    z-index: 99;
+  }
+
+header nav.scrolled {
+    background: rgb(20, 20, 20);
+}
+
+header nav .logo_ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav .logo_ul .logo{
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header nav .logo_ul a:hover{
+    color: red;
+    text-decoration: none;
+    /* font-size: 20px; */
+}
+
+header nav .logo_ul ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav .logo_ul ul li{
+    padding: 3px 15px;
+}
+
+header nav .logo_ul ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header nav .logo_ul ul li a:hover{
+    color: rgb(255, 255, 255, .7);
+}
+
+header nav .search_user {
+    position: relative;
+    size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav .search_user input {
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: rgb(20,20,20);
+    color: #fff;
+    margin-right: 10px;
+}
+
+header nav .search_user input::placeholder{
+    color: #fff;
+}
+
+header nav .search_user img {
+    width: 23px;
+    height: 23px;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header nav .search_user img:hover {
+    width: 28px;
+    height: 28px;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+header nav .search_user .search {
+    position: absolute;
+    width:  320px;
+    height: 270px;
+    /* border: 1px solid #fff; */
+    right: 0;
+    top: 40px;
+    z-index: 99999;
+    overflow-y: auto;
+}
+header nav .search_user .search::-webkit-scrollbar {
+    width: 5px;
+    background: rgb(20,20,20, .3);
+    border-radius: 5px;
+    visibility: hidden;
+}
+header nav .search_user .search::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: rgb(0, 0, 0, .8);
+    border-radius: 5px;
+    visibility: hidden;
+}
+header nav .search_user .search:hover::-webkit-scrollbar {
+    visibility: visible;
+}
+header nav .search_user .search:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+
+header nav .search_user .search .card {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    outline: rgb(20,20,20);
+    border: rgb(20,20,20);
+    margin-bottom: 5px;
+    padding: 3px 0px;
+    text-decoration: none;
+    display: none;
+}
+
+header nav .search_user .search .card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(20,20,20);
+    border-radius: 5px;
+    z-index: -1;
+}
+
+header nav .search_user .search .card img {
+    width: 28px;
+    height: 90%;
+    border-radius: 2px;
+    margin-left: 8px;
+}
+header nav .search_user .search .card .cont {
+    margin-left: 10px;
+    color: #fff;
+}
+header nav .search_user .search .card .cont h3 {
+    font-size: 15px;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+}
+header nav .search_user .search .card .cont p {
+    font-size: 10px;
+    color:rgb(255, 255, 255, .8);
+}
+
+header .content {
+    position: relative;
+    color: #fff;
+    font-size: 25px;
+    margin-top: 300px;
+    padding-left: 80px;
+}
+header .content h1 {
+    font-size: 50px;
+}
+header .content .details {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+}
+header .content p {
+    font-size: 12px;
+    width: 500px;
+}
+header .content .details h3 {
+    color: #fff;
+    font-size: 10px;
+    margin-right: 5px;
+}
+header .content .details h5 {
+    color: rgb(142, 230, 48);
+    font-size: 10px;
+    margin-right: 10px;
+}
+header .content .details h4 {
+    color: #fff;
+    font-size: 10px;
+    margin-right: 10px;
+}
+header .content .btn {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+header .content .btn .playbutton {
+    -webkit-box-align: center;
+    align-items: center;
+    appearance: none;
+    border: 0px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    /* opacity: 1; */
+    padding: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    user-select: none;
+    will-change: background-color, color;
+    word-break: break-word;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+header .content .btn .playbutton i {
+    width: 100%;
+    height: 100%;
+}
+header .content .btn .download_main {
+    -webkit-box-align: center;
+    align-items: center;
+    appearance: none;
+    border: 0px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    background-color: rgba(109, 109, 110, 0.7);
+    -webkit-box-pack: center;
+    justify-content: center;
+    opacity: 2;
+    position: relative;
+    user-select: none;
+    will-change: background-color, color;
+    word-break: break-word;
+    white-space: nowrap;
+}
+header .content .btn .download_main a {
+    -webkit-box-align: center;
+    align-items: center;
+    appearance: none;
+    border: 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    color: #fff;
+    -webkit-box-pack: center;
+    justify-content: center;
+    opacity: 1;
+    padding: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    user-select: none;
+    text-decoration: none;
+    will-change: background-color, color;
+    word-break: break-word;
+    white-space: nowrap;
+}
+header .content .btnsound {
+    margin-top: 20px;
+    align-items: center;
+    float: right;
+}
+header .content .btnsound button {
+    padding: 8px 12px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #000;
+    margin-right: 50px;
+    cursor: pointer;
+    transition: .5s;
+    -webkit-box-align: center;
+    align-items: center;
+    appearance: none;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    /* opacity: 1; */
+    padding: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    user-select: none;
+    will-change: background-color, color;
+    word-break: break-word;
+    white-space: nowrap;
+}
+header .content .btnsound button:hover {
+    /* font-size: 20px; */
+    font-weight: 600;
+    /* background-color: #6b6b6b; */
+    opacity: .6;
+    border-radius: 50px;
+    color: #000;
+}
+
+header .content .btn .playicon {
+    color: #fff;
+    fill: #fff;
+}
+header .content .btn .playbutton:hover {
+    opacity: .6;
+}
+header .content .btn .download_main:hover {
+    opacity: .6;
+}
+
+header section .alltype {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 0px 50px;
+    bottom: 460px;
+    color: #fff;
+    overflow-x: auto;
+    /* background: rgb(20,20,20); */
+    z-index: 2;
+}
+
+header section .alltype .cards {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid #fff; */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+header section .alltype .cards::-webkit-scrollbar {
+    display: none;
+}
+
+header section .alltype .cards .card {
+    position: relative;
+    min-width: 130px;
+    height: 180px;
+    /* border: 1px solid #fff; */
+    border-radius: 8px;
+    margin-right: 10px;
+    background: #000;
+    transition: .3s linear;
+    overflow: hidden;
+}
+
+header section .alltype .cards .card .poster {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 8px; */
+    position: relative;
+    z-index: 999;
+}
+
+header section .alltype .cards .card:hover {
+    min-width: 300px;
+    size: 20px;
+    /* height: 200px; */
+    overflow: hidden;
+}
+
+header section .alltype .cards .card .rest_card {
+    position: absolute;
+    width: 100%;
+    height: 101%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s;
+}
+
+header section .alltype .cards .card .rest_card img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8.5px;
+    z-index: -1;
+}
+
+header section .alltype .cards .card .rest_card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+header section .alltype .cards .card .rest_card .cont {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+header section .alltype .cards .card .rest_card .cont .sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header section .alltype .cards .card .rest_card .cont .sub p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+header section .alltype .cards .card:hover .rest_card {
+    opacity: 1;
+}
+
+header section .alltype .bi-chevron-left{
+    position: absolute;
+    top: 50%;
+    left: 10;
+    width: 25px;
+    height: 25px;
+    /* background:rgb(255, 255, 255, .3); */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 50px;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 999999999;
+    opacity: 0;
+}
+header section .alltype .bi-chevron-right {
+    left: unset;
+    right: 3%;
+    font-size: 50px;
+    background: none;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 50px;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 999999999;
+    opacity: 0;
+}
+header section:hover .alltype .bi-chevron-right {
+    opacity: 1;
+}
+
+header section:hover .alltype .bi-chevron-left {
+    opacity: 1;
+}
+
+
+
+header section .moviestype {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 0px 50px;
+    bottom: 230px;
+    color: #fff;
+    background: rgb(20,20,20);
+    z-index: 2;
+}
+
+header section .moviestype .moviecards {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid #fff; */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+header section .moviestype .moviecards::-webkit-scrollbar {
+    display: none;
+}
+
+header section .moviestype .moviecards .card {
+    position: relative;
+    min-width: 130px;
+    height: 180px;
+    /* border: 1px solid #fff; */
+    border-radius: 8px;
+    margin-right: 10px;
+    background: #000;
+    transition: .3s linear;
+    overflow: hidden;
+}
+
+header section .moviestype .moviecards .card .poster {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 8px; */
+    position: relative;
+    z-index: 999;
+}
+
+header section .moviestype .moviecards .card:hover {
+    min-width: 300px;
+    /* height: 200px; */
+    overflow: hidden;
+}
+
+header section .moviestype .moviecards .card .rest_card {
+    position: absolute;
+    width: 100%;
+    height: 101%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s;
+}
+
+header section .moviestype .moviecards .card .rest_card img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8.5px;
+    z-index: -1;
+}
+
+header section .moviestype .moviecards .card .rest_card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+header section .moviestype .moviecards .card .rest_card .cont {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+header section .moviestype .moviecards .card .rest_card .cont .sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header section .moviestype .moviecards .card .rest_card .cont .sub p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+header section .moviestype .moviecards .card:hover .rest_card {
+    opacity: 1;
+}
+
+header section .moviestype .bi-chevron-left{
+    position: absolute;
+    top: 50%;
+    left: 10;
+    width: 25px;
+    height: 25px;
+    /* background:rgb(255, 255, 255, .3); */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 50px;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 999999999;
+    opacity: 0;
+}
+header section .moviestype .bi-chevron-right {
+    left: unset;
+    right: 3%;
+    font-size: 50px;
+    background: none;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 50px;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 999999999;
+    opacity: 0;
+}
+header section:hover .moviestype .bi-chevron-right {
+    opacity: 1;
+}
+
+header section:hover .moviestype .bi-chevron-left {
+    opacity: 1;
+}
+
+
+header section .seriestype {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 0px 50px;
+    bottom: 0;
+    color: #fff;
+    background: rgb(20,20,20);
+    z-index: 2;
+}
+
+header section .seriestype .seriescards {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid #fff; */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+header section .seriestype .seriescards::-webkit-scrollbar {
+    display: none;
+}
+
+header section .seriestype .seriescards .card {
+    position: relative;
+    min-width: 130px;
+    height: 180px;
+    /* border: 1px solid #fff; */
+    border-radius: 8px;
+    margin-right: 10px;
+    background: #000;
+    transition: .3s linear;
+    overflow: hidden;
+}
+
+header section .seriestype .seriescards .card .poster {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 8px; */
+    position: relative;
+    z-index: 999;
+}
+
+header section .seriestype .seriescards .card:hover {
+    min-width: 300px;
+    /* height: 200px; */
+    overflow: hidden;
+}
+
+header section .seriestype .seriescards .card .rest_card {
+    position: absolute;
+    width: 100%;
+    height: 101%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s;
+}
+
+header section .seriestype .seriescards .card .rest_card img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8.5px;
+    z-index: -1;
+}
+
+header section .seriestype .seriescards .card .rest_card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+header section .seriestype .seriescards .card .rest_card .cont {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+header section .seriestype .seriescards .card .rest_card .cont .sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header section .seriestype .seriescards .card .rest_card .cont .sub p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+header section .seriestype .seriescards .card:hover .rest_card {
+    opacity: 1;
+}
+
+header section .seriestype .bi-chevron-left{
+    position: absolute;
+    top: 50%;
+    left: 10;
+    width: 25px;
+    height: 25px;
+    /* background:rgb(255, 255, 255, .3); */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 50px;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 999999999;
+    opacity: 0;
+}
+header section .seriestype .bi-chevron-right {
+    left: unset;
+    right: 3%;
+    font-size: 50px;
+    background: none;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 50px;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 999999999;
+    opacity: 0;
+}
+header section:hover .seriestype .bi-chevron-right {
+    opacity: 1;
+}
+
+header section:hover .seriestype .bi-chevron-left {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1250px){
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 200%;
+    }
+    
+    header .show_image {
+        left: -50%;
+        width: 200%;
+        height: 100%;
+    }
+    
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 100% 100%;
+        bottom: 460px;
+        height: 24.7vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 2;
+    }
+}
+@media screen and (max-width: 360px){
+    header{
+        width: 100%;
+        height: 200%;
+    }
+    header nav {
+        padding: 0px 10px;
+        height: 15%;
+    }
+    header nav .logo_ul ul {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+    }
+    header nav .logo_ul ul li {
+        padding: 3px 5px;
+    }
+    header nav .logo_ul ul li a {
+        font-size: 10px;
+    }
+    header .content {
+        padding-left: 10px;
+    }
+    header section {
+        padding: 0px 10px;
+    }
+}
+@media screen and (max-width: 562px){
+    header video {
+        position: absolute;
+        width: 520%;
+        height: 200%;
+    }
+@media screen and (max-width: 556px){
+    header video {
+        position: absolute;
+        width: 520%;
+        height: 200%;
+    }
+}}
