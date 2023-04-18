@@ -55,6 +55,9 @@ header video {
     right: 0;
     z-index: -3;
 }
+
+
+
 header .show_image {
     background-position: 50%;
     background-size: cover;
@@ -84,7 +87,6 @@ header .videovignette {
 header .vignette-layer {
     background-color: transparent;
     background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
-    /* background-position: 100 bottom; */
     position: absolute;
     top: 0;
     right: 0;
@@ -459,7 +461,7 @@ header section .alltype {
     padding: 0px 50px;
     bottom: 460px;
     color: #fff;
-    overflow-x: auto;
+    overflow-x: hidden;
     /* background: rgb(20,20,20); */
     z-index: 2;
 }
@@ -469,10 +471,8 @@ header section .alltype .cards {
     width: 100%;
     height: 200px;
     /* border: 1px solid #fff; */
-    margin-top: 10px;
     display: flex;
-    align-items: center;
-    overflow-x: auto;
+    overflow: hidden;
     scroll-behavior: smooth;
 }
 header section .alltype .cards::-webkit-scrollbar {
@@ -481,13 +481,15 @@ header section .alltype .cards::-webkit-scrollbar {
 
 header section .alltype .cards .card {
     position: relative;
-    min-width: 130px;
+    min-width: 300px;
     height: 180px;
     /* border: 1px solid #fff; */
-    border-radius: 8px;
+    /* border-radius: 8px; */
+    text-decoration: none;
     margin-right: 10px;
     background: #000;
-    transition: .3s linear;
+    transition: transform 500ms;
+    transition-delay: .44s;
     overflow: hidden;
 }
 
@@ -496,26 +498,50 @@ header section .alltype .cards .card .poster {
     height: 100%;
     /* border-radius: 8px; */
     position: relative;
-    z-index: 999;
+    z-index: 1;
 }
 
-header section .alltype .cards .card:hover {
-    min-width: 300px;
-    size: 20px;
-    /* height: 200px; */
-    overflow: hidden;
+
+
+.alltype img {
+    display: block;
+    max-width: 100%;
+  }
+
+.cards:focus-within .card,
+.cards:hover .card {
+  transform: translateX(15%);
+}
+.cards:focus-within .card,
+.cards:hover .card {
+  transform: translateX(-15%);
+}
+.cards .card:focus,
+.cards .card:hover {
+  transform: scale(1.2);
+  width: 500px;
+  z-index: 555;
+}
+
+.card:focus ~ .card,
+.card:hover ~ .card {
+  transform: translate(15%);
 }
 
 header section .alltype .cards .card .rest_card {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 101%;
+    height: auto;
     border-radius: 8px;
     left: 0;
     top: 0;
     z-index: 999999;
     opacity: 0;
+    float: left;
+    overflow-y: visible;
+    overflow-x: visible;
     transition: 1s;
+    transition-delay: .44s;
 }
 
 header section .alltype .cards .card .rest_card img {
@@ -523,6 +549,7 @@ header section .alltype .cards .card .rest_card img {
     width: 100%;
     height: 100%;
     border-radius: 8.5px;
+    overflow-x: visible;
     z-index: -1;
 }
 
@@ -537,18 +564,23 @@ header section .alltype .cards .card .rest_card::after {
 }
 
 header section .alltype .cards .card .rest_card .cont {
-    position: absolute;
+    position: relative;
     width: 100%;
-    bottom: 10px;
-    left: 0;
+    bottom: 70px;
+    left: 9px;
+    text-decoration: none;
+    overflow-x: visible;
     color: #fff;
     padding: 0px 20px;
 }
 
 header section .alltype .cards .card .rest_card .cont .sub {
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    overflow: visible;
 }
 
 header section .alltype .cards .card .rest_card .cont .sub p {
@@ -636,13 +668,14 @@ header section .moviestype .moviecards::-webkit-scrollbar {
 
 header section .moviestype .moviecards .card {
     position: relative;
-    min-width: 130px;
+    min-width: 300px;
     height: 180px;
     /* border: 1px solid #fff; */
     border-radius: 8px;
     margin-right: 10px;
     background: #000;
-    transition: .3s linear;
+    transition: transform 500ms;
+    transition-delay: .44s;
     overflow: hidden;
 }
 
@@ -654,11 +687,31 @@ header section .moviestype .moviecards .card .poster {
     z-index: 999;
 }
 
-header section .moviestype .moviecards .card:hover {
-    min-width: 300px;
-    /* height: 200px; */
-    overflow: hidden;
+.moviestype img {
+    display: block;
+    max-width: 100%;
+  }
+
+.moviecards:focus-within .card,
+.moviecards:hover .card {
+  transform: translateX(15%);
 }
+.moviecards:focus-within .card,
+.moviecards:hover .card {
+  transform: translateX(-15%);
+}
+.moviecards .card:focus,
+.moviecards .card:hover {
+  transform: scale(1.2);
+  width: 500px;
+  z-index: 555;
+}
+
+.card:focus ~ .card,
+.card:hover ~ .card {
+  transform: translate(15%);
+}
+
 
 header section .moviestype .moviecards .card .rest_card {
     position: absolute;
@@ -670,6 +723,7 @@ header section .moviestype .moviecards .card .rest_card {
     z-index: 999999;
     opacity: 0;
     transition: 1s;
+    transition-delay: .44s;
 }
 
 header section .moviestype .moviecards .card .rest_card img {
@@ -693,13 +747,14 @@ header section .moviestype .moviecards .card .rest_card::after {
 header section .moviestype .moviecards .card .rest_card .cont {
     position: absolute;
     width: 100%;
-    bottom: 10px;
-    left: 0;
+    bottom: 20px;
+    left: 9px;
     color: #fff;
     padding: 0px 20px;
 }
 
 header section .moviestype .moviecards .card .rest_card .cont .sub {
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -789,13 +844,14 @@ header section .seriestype .seriescards::-webkit-scrollbar {
 
 header section .seriestype .seriescards .card {
     position: relative;
-    min-width: 130px;
+    min-width: 300px;
     height: 180px;
     /* border: 1px solid #fff; */
     border-radius: 8px;
     margin-right: 10px;
     background: #000;
-    transition: .3s linear;
+    transition: transform 500ms;
+    transition-delay: .44s;
     overflow: hidden;
 }
 
@@ -807,10 +863,29 @@ header section .seriestype .seriescards .card .poster {
     z-index: 999;
 }
 
-header section .seriestype .seriescards .card:hover {
-    min-width: 300px;
-    /* height: 200px; */
-    overflow: hidden;
+.seriestype img {
+    display: block;
+    max-width: 100%;
+  }
+
+.seriescards:focus-within .card,
+.seriescards:hover .card {
+  transform: translateX(15%);
+}
+.seriescards:focus-within .card,
+.seriescards:hover .card {
+  transform: translateX(-15%);
+}
+.seriescards .card:focus,
+.seriescards .card:hover {
+  transform: scale(1.2);
+  width: 500px;
+  z-index: 555;
+}
+
+.card:focus ~ .card,
+.card:hover ~ .card {
+  transform: translate(15%);
 }
 
 header section .seriestype .seriescards .card .rest_card {
@@ -823,6 +898,7 @@ header section .seriestype .seriescards .card .rest_card {
     z-index: 999999;
     opacity: 0;
     transition: 1s;
+    transition-delay: .44s;
 }
 
 header section .seriestype .seriescards .card .rest_card img {
@@ -847,12 +923,13 @@ header section .seriestype .seriescards .card .rest_card .cont {
     position: absolute;
     width: 100%;
     bottom: 10px;
-    left: 0;
+    left: 9px;
     color: #fff;
     padding: 0px 20px;
 }
 
 header section .seriestype .seriescards .card .rest_card .cont .sub {
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
