@@ -72,19 +72,14 @@ header .show_image {
 }
 
 header .videovignette {
-    background-color: transparent;
-    background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-repeat: repeat-x;
-    background-size: 100% 100%;
-    bottom: 440px;
-    height: 14.7vw;
+    background: linear-gradient(90deg,#000,transparent 85%);
+    bottom: 0;
+    left: 0;
     opacity: 1;
-    top: auto;
-    width: 100%;
-    z-index: 2;
+    position: absolute;
+    right: 10.09%;
+    top: 0;
+    transition: opacity .5s;
 }
 header .vignette-layer {
     background-color: transparent;
