@@ -13,23 +13,24 @@ let moviesseries_type = document.getElementById('movies-series_type');
 let video = document.getElementById('show_video');
 let play = document.getElementsByClassName('playbutton')[0];
 
+
 left_btn.addEventListener('click', ()=> {
-    cards.scrollLeft -= 200;
+    cards.scrollLeft -= 1000;
 })
 right_btn.addEventListener('click', ()=> {
-    cards.scrollLeft += 200;
+    cards.scrollLeft += 1000;
 })
 left_btn2.addEventListener('click', ()=> {
-    cards_2.scrollLeft -= 200;
+    cards_2.scrollLeft -= 1000;
 })
 right_btn2.addEventListener('click', ()=> {
-    cards_2.scrollLeft += 200;
+    cards_2.scrollLeft += 1000;
 })
 left_btn3.addEventListener('click', ()=> {
-    cards_3.scrollLeft -= 200;
+    cards_3.scrollLeft -= 1000;
 })
 right_btn3.addEventListener('click', ()=> {
-    cards_3.scrollLeft += 200;
+    cards_3.scrollLeft += 1000;
 })
 
 
@@ -42,9 +43,8 @@ fetch(json_url).then(Response => Response.json())
             card.classList.add('card');
             card.href = url;
             card.innerHTML= `
-            <img src="${sposter}" alt="${name}" class="poster">
-                        <div class="rest_card">
-                            <img src="${bposter}">
+            <img src="${bposter}" alt="${name}" class="poster">
+            <div class="rest_card">
                             <div class="cont">
                                 <h4>${name}</h4>
                                 <div class="sub">
@@ -169,9 +169,8 @@ fetch(json_url).then(Response => Response.json())
                     card.classList.add('card');
                     card.href = url;
                     card.innerHTML= `
-                    <img src="${sposter}" alt="${name}" class="poster">
+                    <img src="${bposter}" alt="${name}" class="poster">
                                 <div class="rest_card">
-                                    <img src="${bposter}">
                                     <div class="cont">
                                         <h4>${name}</h4>
                                         <div class="sub">
@@ -196,9 +195,8 @@ fetch(json_url).then(Response => Response.json())
                     card.classList.add('card');
                     card.href = url;
                     card.innerHTML= `
-                    <img src="${sposter}" alt="${name}" class="poster">
+                    <img src="${bposter}" alt="${name}" class="poster">
                                 <div class="rest_card">
-                                    <img src="${bposter}">
                                     <div class="cont">
                                         <h4>${name}</h4>
                                         <div class="sub">
@@ -223,9 +221,8 @@ fetch(json_url).then(Response => Response.json())
                     card.classList.add('card');
                     card.href = url;
                     card.innerHTML= `
-                    <img src="${sposter}" alt="${name}" class="poster">
+                    <img src="${bposter}" alt="${name}" class="poster">
                                 <div class="rest_card">
-                                    <img src="${bposter}">
                                     <div class="cont">
                                         <h4>${name}</h4>
                                         <div class="sub">
