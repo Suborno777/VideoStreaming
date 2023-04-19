@@ -1,9 +1,9 @@
 let left_btn = document.getElementsByClassName('bi-chevron-left')[0];
+let right_btn = document.getElementsByClassName('bi-chevron-right')[0];
 let left_btn2 = document.getElementById('chevron-left2');
 let right_btn2 = document.getElementById('chevron-right2');
 let left_btn3 = document.getElementById('chevron-left3');
 let right_btn3 = document.getElementById('chevron-right3');
-let right_btn = document.getElementsByClassName('bi-chevron-right')[0];
 let cards = document.getElementsByClassName('cards')[0];
 let cards_2 = document.getElementsByClassName('moviecards')[0]
 let cards_3 = document.getElementsByClassName('seriescards')[0]
@@ -43,7 +43,9 @@ fetch(json_url).then(Response => Response.json())
             card.classList.add('card');
             card.href = url;
             card.innerHTML= `
+            <div class="posterimage">
             <img src="${bposter}" alt="${name}" class="poster">
+            </div>
             <div class="rest_card">
                             <div class="cont">
                                 <h4>${name}</h4>
@@ -103,6 +105,7 @@ fetch(json_url).then(Response => Response.json())
                         search.style.opacity = 1;
                     } else {
                         a[index].style.display = "none";
+                        search.style.visibility = "none";
                     }
                     if (search_input.value == 0) {
                         search.style.visibility = "hidden";
@@ -181,7 +184,7 @@ fetch(json_url).then(Response => Response.json())
                                 </div>
                 `
                 moviesseries_type.innerText = 'Series';
-                cards.appendChild(card);
+                cards_3.appendChild(card);
             });
             })
 
@@ -195,7 +198,9 @@ fetch(json_url).then(Response => Response.json())
                     card.classList.add('card');
                     card.href = url;
                     card.innerHTML= `
+                    <div class="posterimage">
                     <img src="${bposter}" alt="${name}" class="poster">
+                    </div>
                                 <div class="rest_card">
                                     <div class="cont">
                                         <h4>${name}</h4>
@@ -221,7 +226,9 @@ fetch(json_url).then(Response => Response.json())
                     card.classList.add('card');
                     card.href = url;
                     card.innerHTML= `
+                    <div class="posterimage">
                     <img src="${bposter}" alt="${name}" class="poster">
+                    </div>
                                 <div class="rest_card">
                                     <div class="cont">
                                         <h4>${name}</h4>
