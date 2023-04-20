@@ -1,0 +1,49 @@
+ErrorDocument 404 /shorelinesurfteam.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost?</title>
+    <style>
+        * {
+            align-self: center;
+        }
+        button {
+            -webkit-box-align: center;
+            align-items: center;
+            appearance: none;
+            border: 0px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            /* opacity: 1; */
+            padding: 0.7rem;
+            padding-left: 1.4rem;
+            padding-right: 1.4rem;
+            position: relative;
+            user-select: none;
+            will-change: background-color, color;
+            word-break: break-word;
+            white-space: nowrap;
+            margin-right: 10px;
+        }
+        h4 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h4>Lost?</h4>
+    <button>
+        <a href="index.html">
+            Go To Home Page
+        </a>
+    </button>
+</body>
+</html>
