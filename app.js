@@ -7,8 +7,10 @@ let right_btn3 = document.getElementById('chevron-right3');
 let cards = document.getElementsByClassName('cards')[0];
 let cards_2 = document.getElementsByClassName('moviecards')[0]
 let cards_3 = document.getElementsByClassName('seriescards')[0]
-let search = document.getElementsByClassName('search')[0];
+let search = document.getElementsByClassName('search_user')[0];
+var searcharea = document.getElementsByClassName('searcharea')[0];
 var search_input = document.getElementById('search_input');
+var search_user = document.getElementsByClassName('search')[0];
 let moviesseries_type = document.getElementById('movies-series_type');
 let video = document.getElementById('show_video');
 let play = document.getElementsByClassName('playbutton')[0];
@@ -85,12 +87,20 @@ fetch(json_url).then(Response => Response.json())
                         <p>${genre}, ${date}</p>
                     </div>
         `
-        search.appendChild(card);
+        search_user.appendChild(card);
         });
 
         // search filter
 
+        let buttonsearch = document.getElementsByClassName('searchbutton')[0];
+        buttonsearch.addEventListener('click', function() {
+            if (search_input.style.display == "none") {
+                search_input.style.display = "flex";
+            } else {
+                search_input.style.display = "none";
+            }
 
+        })
         search_input.addEventListener('keyup', ()=> {
                 let filter = search_input.value.toUpperCase();
                 let a = search.getElementsByTagName('a');
@@ -101,15 +111,15 @@ fetch(json_url).then(Response => Response.json())
                     let TextValue = b.textContent || b.innerText;
                     if (TextValue.toUpperCase().indexOf(filter) > -1) {
                         a[index].style.display = "flex";
-                        search.style.visibility = "visible";
-                        search.style.opacity = 1;
+                        search_user.style.visibility = "visible";
+                        search_user.style.opacity = 1;
                     } else {
                         a[index].style.display = "none";
-                        search.style.visibility = "none";
+                        search_user.style.visibility = "none";
                     }
                     if (search_input.value == 0) {
-                        search.style.visibility = "hidden";
-                        search.style.opacity = 0;
+                        search_user.style.visibility = "hidden";
+                        search_user.style.opacity = 0;
                     }
                 }
             })
@@ -141,16 +151,18 @@ fetch(json_url).then(Response => Response.json())
             // sound toggle
 
             let sound = document.getElementById('sound');
+            let btnsound = document.getElementsByClassName('btnsound')[0];
             let video = document.getElementById('show_video');
 
 
                 sound.addEventListener('click', () => {
                     if(video.muted){
                         video.muted = false;
-                        sound.innerHTML = '<i class="bi bi-volume-up-fill"></i></a>'
+                        sound.innerHTML = '<div id="svg"><i class="bi bi-volume-up-fill"></i></div>'
                     } else {
                         video.muted = true;
-                        sound.innerHTML = '<i class="bi bi-volume-mute-fill"></i></a>'
+                        sound.innerHTML = '<div id="svg"><i class="bi bi-volume-mute-fill"></i></div>'
+                        btnsound.style.outline = "1px solid #fff";
                     }})
 
             // movie and series array
