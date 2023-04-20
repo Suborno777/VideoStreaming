@@ -9,7 +9,7 @@
 body {
     width: 100%;
     height: 150vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppins',sans-serif;
     background: rgb(20,20,20);
     display: flex;
     align-items: center;
@@ -183,16 +183,43 @@ header nav .search_user {
     align-items: center;
     justify-content: center;
 }
+header nav .search_user button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10px;
+}
+header nav .search_user button i {
+    font-size: 16px;
+    color: #fff;
+}
 
 header nav .search_user input {
     padding: 5px 10px;
     font-size: 20px;
-    border-radius: 5px;
-    border: none;
+    border: 1px solid #fff;
     outline: none;
     background: rgb(20,20,20);
+    opacity: 1;
     color: #fff;
     margin-right: 10px;
+    transition: all .5s ease-in-out;
+}
+header nav .search_user .search_input {
+    padding: 5px 10px;
+    font-size: 20px;
+    border: 1px solid #fff;
+    outline: none;
+    visibility: hidden;
+    display: none;
+    color: #fff;
+    margin-right: 10px;
+    transition: visibility 1s linear;
+}
+header nav .search_user .search_input.show {
+    visibility: visible;
+    display: flex;
 }
 
 header nav .search_user input::placeholder{
@@ -218,6 +245,7 @@ header nav .search_user .search {
     width:  320px;
     height: 200px;
     /* border: 1px solid #fff; */
+    background: rgb(20, 20, 20);
     right: 0;
     top: 40px;
     z-index: 99999;
@@ -394,48 +422,51 @@ header .content .btn .download_main a {
     white-space: nowrap;
 }
 header .content .btnsound {
-    margin-top: 20px;
+    outline: none;
     align-items: center;
+    margin-right: 50px;
     float: right;
+    outline: none;
+    border-radius: 50%;
 }
 header .content .btnsound button {
-    padding: 8px 12px;
-    font-size: 20px;
+    padding: 0.5rem;
     font-weight: 600;
-    background-color: #fff;
-    border-radius: 10px;
-    color: #000;
-    margin-right: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
     cursor: pointer;
     transition: .5s;
     -webkit-box-align: center;
     align-items: center;
     appearance: none;
-    border: 0px;
-    border-radius: 10px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
     /* opacity: 1; */
-    padding: 0.8rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
     position: relative;
     user-select: none;
     will-change: background-color, color;
     word-break: break-word;
     white-space: nowrap;
 }
+header .content .btnsound button .svg {
+    border: none;
+}
+header .content .btnsound button .svg i {
+    height: 100%;
+    width: 100%;
+}
 header .content .btnsound button:hover {
-    /* font-size: 20px; */
-    font-weight: 600;
-    /* background-color: #6b6b6b; */
-    opacity: .6;
-    border-radius: 50px;
-    color: #000;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 header .content .btn .playicon {
@@ -1033,4 +1064,9 @@ header section:hover .seriestype .bi-chevron-left {
         width: 520%;
         height: 200%;
     }
+}}
+
+@media screen and (min-width: 0) and (max-width: 480px) and (max-aspect-ratio: 4 / 3) {
+    body, html, header {
+    font-size: 1.5vw;
 }}
