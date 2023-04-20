@@ -112,16 +112,13 @@ fetch(json_url).then(Response => Response.json())
                     if (TextValue.toUpperCase().indexOf(filter) > -1) {
                         a[index].style.display = "flex";
                         search_user.style.visibility = "visible";
-                        search_user.style.display = "block";
                         search_user.style.opacity = 1;
                     } else {
                         a[index].style.display = "none";
-                        search_user.style.visibility = "hidden";
-                        search_user.style.display = "block";
+                        search_user.style.visibility = "visible";
                     }
                     if (search_input.value == 0) {
                         search_user.style.visibility = "hidden";
-                        search_user.style.display = "block";
                         search_user.style.opacity = 0;
                     }
                 }
@@ -144,10 +141,10 @@ fetch(json_url).then(Response => Response.json())
             document.addEventListener("scroll", () => {
                 const nav = document.querySelector("nav");
 
-                if (window.scrollY > 0 == true) {
-                    nav.style.background = "rgb(20, 20, 20)";
-                } else {
+                if (window.scrollY > 0 == false) {
                     nav.style.background = "transparent";
+                } else {
+                    nav.style.background = "rgb(20, 20, 20)";
                 }
             })
 
