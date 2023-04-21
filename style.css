@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 
 * {
     padding: 0%;
@@ -9,7 +10,7 @@
 body {
     width: 100%;
     height: 150vh;
-    font-family: 'poppins',sans-serif;
+    font-family: 'poppins', sans-serif;
     background: rgb(20,20,20);
     display: flex;
     align-items: center;
@@ -151,6 +152,7 @@ header nav .logo_ul {
 header nav .logo{
     color: red;
     font-weight: bold;
+    font-family: 'Teko', sans-serif;
     text-decoration: none;
     margin-right: 5px;
     cursor: pointer;
@@ -270,9 +272,9 @@ header nav .logo_ul ul li a:hover{
     }
     .search{
         font-size: 20px;
-        border: 1px solid #fff;
+        /* border: 1px solid #fff; */
         outline: none;
-        background: rgb(20,20,20);
+        /* background: rgb(20,20,20); */
         display: flex;
         flex-direction: column;
         margin-right: 100px;
@@ -286,7 +288,7 @@ header nav .logo_ul ul li a:hover{
         margin-left: 1000px;
     }
 }
-@media(max-width: 710px){
+@media(max-width: 900px){
     .hamburger{
         position: absolute;
         display: block;
@@ -329,7 +331,7 @@ header nav .logo_ul ul li a:hover{
     header nav .search_user button i{
         display: none;
     }
-    input{
+    .search_input{
         padding: 5px 10px;
         font-size: 20px;
         border: 1px solid #fff;
@@ -344,9 +346,84 @@ header nav .logo_ul ul li a:hover{
     }
     .search{
         font-size: 20px;
+        /* border: 1px solid #fff; */
+        outline: none;
+        /* background: rgb(20,20,20); */
+        display: flex;
+        flex-direction: column;
+        margin-right: 100px;
+        opacity: 1;
+        color: #fff;
+        margin-top: 105px;
+    }
+
+    .nav-menu.active{
+        max-width: 2000%;
+        left: 0;
+        margin-left: 40px;
+    }
+}
+@media(width: 466) and (height: 736){
+    .hamburger{
+        position: absolute;
+        display: block;
+        right: 10%;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+    .nav-menu .logo_ul ul{
+        position: fixed;
+        top: 70px;
+        padding-bottom: 50px;
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(20, 20, 20);
+        width: 107%;
+        transition: 0.3s;
+    }
+
+    header nav .search_user button i{
+        display: none;
+    }
+    .search_input{
+        padding: 5px 10px;
+        font-size: 20px;
         border: 1px solid #fff;
+        margin-left: 15px;
         outline: none;
         background: rgb(20,20,20);
+        display: flex;
+        position: absolute;
+        opacity: 1;
+        color: #fff;
+        margin-top: 280px;
+    }
+    .search{
+        font-size: 20px;
+        /* border: 1px solid #fff; */
+        outline: none;
+        /* background: rgb(20,20,20); */
         display: flex;
         flex-direction: column;
         margin-right: 100px;
@@ -357,7 +434,7 @@ header nav .logo_ul ul li a:hover{
 
     .nav-menu.active{
         left: 0;
-        margin-left: 350px;
+        margin-left: 40px;
     }
 }
 @media(max-width:690px){
@@ -403,24 +480,24 @@ header nav .logo_ul ul li a:hover{
     header nav .search_user button i{
         display: none;
     }
-    input{
+    .search_input{
         padding: 5px 10px;
         font-size: 20px;
         border: 1px solid #fff;
-        margin-left: 15px;
+        margin-left: -120px;
         outline: none;
         background: rgb(20,20,20);
         display: flex;
         position: absolute;
         opacity: 1;
         color: #fff;
-        margin-top: 280px;
+        margin-top: 125px;
     }
     .search{
         font-size: 20px;
-        border: 1px solid #fff;
+        /* border: 1px solid #fff; */
         outline: none;
-        background: rgb(20,20,20);
+        /* background: rgb(20,20,20); */
         display: flex;
         flex-direction: column;
         margin-right: -150px;
@@ -437,50 +514,40 @@ header nav .logo_ul ul li a:hover{
 
 header nav .nav-menu .nav-item .search_user {
     position: relative;
-    size: 30px;
+    size: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 header nav .search_user button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 10px;
-}
-header nav .search_user button i {
-    font-size: 16px;
+    width: 18px;
+    left: 8px;
+    top: 50%;
     color: #fff;
+    cursor: pointer;
+    border: none;
+    transform: translateY(-50%);
+    background-color: transparent;
+    position: absolute;
 }
 
-header nav .search_user input {
-    padding: 5px 10px;
-    font-size: 20px;
-    border: 1px solid #fff;
-    outline: none;
-    background: rgb(20,20,20);
-    display: none;
-    opacity: 1;
+.search_input {
+    width: 0px;
+    height: 34px;
+    background: transparent;
+    box-shadow: none;
     color: #fff;
-    margin-right: 10px;
-    transition: all .5s ease-in-out;
-}
-header nav .search_user .search_input {
-    padding: 5px 10px;
-    font-size: 20px;
-    border: 1px solid #fff;
+    border: 1px solid transparent;
     outline: none;
-    visibility: hidden;
-    display: none;
-    color: #fff;
-    margin-right: 10px;
-    transition: visibility 1s linear;
+    padding-left: 35px;
+    font-size: 16px;
+    transition: 0.3s ease all;
 }
-header nav .search_user .search_input.show {
-    visibility: visible;
-    display: flex;
-}
+.search_input.show {
+      width: 240px;
+      border-color: #fff;
+      background-color: #000;
+    }
 
 header nav .search_user input::placeholder{
     color: #fff;
@@ -505,12 +572,12 @@ header nav .search_user .search {
     width:  320px;
     height: 200px;
     /* border: 1px solid #fff; */
-    background: rgb(20, 20, 20);
+    /* background: rgb(20, 20, 20); */
     visibility: hidden;
     right: 0;
     top: 40px;
     z-index: 99999;
-    overflow-y: auto;
+    overflow-x: hidden;
 }
 header nav .search_user .search::-webkit-scrollbar {
     width: 5px;
@@ -580,7 +647,7 @@ header .content {
     position: relative;
     color: #fff;
     font-size: 25px;
-    margin-top: 300px;
+    margin-top: 250px;
     padding-left: 80px;
 }
 header .content h1 {
@@ -592,8 +659,8 @@ header .content .details {
     margin-top: 0px;
 }
 header .content p {
-    font-size: 12px;
-    width: 500px;
+    font-size: 10px;
+    width: 300px;
 }
 header .content .details h3 {
     color: #fff;
@@ -688,6 +755,7 @@ header .content .btnsound {
     margin-right: 50px;
     float: right;
     outline: none;
+    display: none;
     border-radius: 50%;
 }
 header .content .btnsound button {
@@ -1137,9 +1205,13 @@ header section .seriestype .seriescards {
     /* border: 1px solid #fff; */
     margin-top: 10px;
     display: flex;
-    align-items: center;
-    overflow-x: hidden;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) -1))) / var(--per-view));
+    grid-gap: 1.5rem;
     scroll-behavior: smooth;
+    overflow-x: auto;
+    left: 0;
+    transition: .3s;
 }
 header section .seriestype .seriescards::-webkit-scrollbar {
     display: none;
@@ -1323,6 +1395,43 @@ header section:hover .seriestype .bi-chevron-left {
         z-index: 2;
     }
 }
+@media screen and (max-width: 360px){
+    header{
+        width: 100%;
+        height: 200%;
+    }
+    header nav {
+        padding: 0px 10px;
+        height: 15%;
+    }
+    header nav .logo_ul ul {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+    }
+    header nav .logo_ul ul li {
+        padding: 3px 5px;
+    }
+    header nav .logo_ul ul li a {
+        font-size: 1.5vw;
+    }
+    header .content {
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width: 562px){
+    header video {
+        position: absolute;
+        width: 520%;
+        height: 200%;
+    }
+@media screen and (max-width: 556px){
+    header video {
+        position: absolute;
+        width: 520%;
+        height: 200%;
+    }
+}}
 @media screen and (max-width: 360px){
     header{
         width: 100%;
