@@ -23,7 +23,7 @@ const navMenu = document.querySelector(".nav-menu")
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
-    search_input.style.display = "flex";
+    search_input.classList.add('show');
 })
 
 
@@ -132,10 +132,10 @@ fetch(json_url).then(Response => Response.json())
 
         let buttonsearch = document.getElementsByClassName('searchbutton')[0];
         buttonsearch.addEventListener('click', function() {
-            if (search_input.style.display == "none") {
-                search_input.style.display = "flex";
+            if (!search_input.classList.contains('show')) {
+                search_input.classList.add('show');
             } else {
-                search_input.style.display = "none";
+                search_input.classList.remove('show');
             }
 
         })
@@ -191,6 +191,8 @@ fetch(json_url).then(Response => Response.json())
             let sound = document.getElementById('sound');
             let btnsound = document.getElementsByClassName('btnsound')[0];
             let video = document.getElementById('show_video');
+
+            btnsound.style.display = "flex";
 
                 sound.addEventListener('click', () => {
                     if(video.muted){
