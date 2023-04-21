@@ -4,7 +4,7 @@ let left_btn2 = document.getElementById('chevron-left2');
 let right_btn2 = document.getElementById('chevron-right2');
 let left_btn3 = document.getElementById('chevron-left3');
 let right_btn3 = document.getElementById('chevron-right3');
-let cards = document.getElementsByClassName('cards')[0];
+let cards = document.getElementsByClassName('alltypecards')[0];
 let cards_2 = document.getElementsByClassName('moviecards')[0]
 let cards_3 = document.getElementsByClassName('seriescards')[0]
 let search = document.getElementsByClassName('search_user')[0];
@@ -15,6 +15,17 @@ let moviesseries_type = document.getElementById('movies-series_type');
 let video = document.getElementById('show_video');
 let play = document.getElementsByClassName('playbutton')[0];
 
+// hamburger
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu")
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    search_input.style.display = "flex";
+})
+
 
 left_btn.addEventListener('click', ()=> {
     cards.scrollLeft -= 1000;
@@ -22,6 +33,8 @@ left_btn.addEventListener('click', ()=> {
 right_btn.addEventListener('click', ()=> {
     cards.scrollLeft += 1000;
 })
+
+
 left_btn2.addEventListener('click', ()=> {
     cards_2.scrollLeft -= 1000;
 })
@@ -44,6 +57,7 @@ fetch(json_url).then(Response => Response.json())
             let card = document.createElement('a');
             card.classList.add('card');
             card.href = url;
+            card.loop = true;
             card.innerHTML= `
             <div class="posterimage">
             <img src="${bposter}" alt="${name}" class="poster">
@@ -73,6 +87,29 @@ fetch(json_url).then(Response => Response.json())
 
 
 
+    const imageWrapper = document.querySelector('.alltypecards')
+    const imageItems = document.querySelectorAll('.alltypecards > *')
+    const imageLength = imageItems.length
+    const perView = 15
+    let totalScroll = 10
+
+    imageWrapper.style.setProperty('--per-view', perView)
+    for(let i = 0; i < perView; i++){
+        imageWrapper.insertAdjacentHTML('beforeend', imageItems[i].outerHTML)
+    }
+
+
+    function scrolling() {
+        totalScroll++
+        if(totalScroll == imageLength + 5){
+            totalScroll = 10
+            imageWrapper.style.transition = '0s'
+            imageWrapper.style.left = '0'
+        }
+        const widthEl = document.querySelector('.alltypecards > :first-child').offsetWidth + 50
+        imageWrapper.style.left = `-${totalScroll * widthEl}px`
+        imageWrapper.style.transition = '.3s'
+    }
     
     // search data load
     data.forEach(element => {
