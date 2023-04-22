@@ -78,7 +78,15 @@ fetch(json_url).then(Response => Response.json())
     let random_array = Math.floor(Math.random() * 12);
     
     document.getElementById('title').innerText = data[random_array].name;
-    document.getElementsByClassName('show_image')[0].src = data[random_array].bposter;
+    var x = window.matchMedia("(max-width: 900px)");
+    function widthfunc (x){}
+    if(x.matches){
+        document.getElementsByClassName('show_image')[0].src = data[random_array].sposter;
+    } else {
+        document.getElementsByClassName('show_image')[0].src = data[random_array].bposter;
+    }
+    widthfunc(x)
+
     document.getElementById('moreinfo').href = data[random_array].url;
     document.getElementsByTagName('video')[0].src = data[random_array].trailer;
     document.getElementsByTagName('video')[0].volume = 0.3;
