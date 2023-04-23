@@ -82,14 +82,27 @@ fetch(json_url).then(Response => Response.json())
     function widthfunc (x){}
     if(x.matches){
         document.getElementsByClassName('show_image')[0].src = data[random_array].sposter;
+        document.getElementsByClassName('rate')[0].style.display = "none";
     } else {
         document.getElementsByClassName('show_image')[0].src = data[random_array].bposter;
+        document.getElementsByClassName('rate')[0].style.display = "flex";
     }
     widthfunc(x)
 
     document.getElementById('moreinfo').href = data[random_array].url;
+    var vid = document.getElementsByTagName('video')[0];
+    vid.ontimeupdate = function(){ontimevid()};
+
+    function ontimevid(){
+        if(vid.currentTime > 1.0){
+            document.getElementById('sound').style.display = "block";
+        } else {
+            document.getElementById('sound').style.display = "none";
+        }
+    }
     document.getElementsByTagName('video')[0].src = data[random_array].trailer;
     document.getElementsByTagName('video')[0].volume = 0.3;
+    document.getElementsByClassName('rating')[0].innerText = data[random_array].rate;
     document.getElementById('det').innerText = data[random_array].detail;
     document.getElementById('gen').innerText = data[random_array].genre;
     document.getElementById('date').innerText = data[random_array].date;
@@ -200,8 +213,6 @@ fetch(json_url).then(Response => Response.json())
             let btnsound = document.getElementsByClassName('btnsound')[0];
             let video = document.getElementById('show_video');
 
-            btnsound.style.display = "flex";
-
                 sound.addEventListener('click', () => {
                     if(video.muted){
                         localStorage.setItem("soundtoggle", "false");
@@ -211,7 +222,6 @@ fetch(json_url).then(Response => Response.json())
                         localStorage.setItem("soundtoggle", "true");
                         video.muted = true;
                         sound.innerHTML = '<div id="svg"><i class="bi bi-volume-mute-fill"></i></div>'
-                        btnsound.style.outline = "1px solid #fff";
                     }})
 
                     var soundtg = localStorage.getItem("soundtoggle");
