@@ -114,6 +114,7 @@ header nav {
     width: 100%;
     height: 7%;
     top: 0;
+    background: unset;
     /* border: 1px solid #fff; */
     display: flex;
     align-items: center;
@@ -136,10 +137,6 @@ header nav {
     padding: 0px 50px;
     background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
     z-index: 99;
-  }
-
-header nav.scrolled {
-    background: rgb(20, 20, 20);
 }
 
 header nav .logo_ul {
@@ -1195,6 +1192,7 @@ header .content .btnsound button:hover {
 header .content .btnsound .rate {
     align-items: center;
     background-color: rgba(51,51,51,.6);
+    font-family: 'Lato', sans-serif;
     border: 3px #dcdcdc;
     border-left-style: solid;
     box-sizing: border-box;
@@ -1214,6 +1212,9 @@ header .content .btn .playbutton:hover {
 header .content .btn .download_main:hover {
     opacity: .6;
 }
+
+
+
 
 header section .alltype {
     position: absolute;
@@ -1236,7 +1237,7 @@ header section .alltype .alltypecards {
     display: flex;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) -1))) / var(--per-view));
-    grid-gap: 1.5rem;
+    grid-gap: 1.0rem;
     scroll-behavior: smooth;
     overflow-x: auto;
     left: 0;
@@ -1256,7 +1257,6 @@ header section .alltype .alltypecards .card {
     min-width: 300px;
     height: 180px;
     /* border: 1px solid #fff; */
-    margin-right: 10px;
     background: #000;
     transition: transform 500ms;
     transition-delay: .44s;
@@ -1276,31 +1276,32 @@ header section .alltype .alltypecards .card .posterimage .poster {
 }
 
 
-.alltype .alltypecards:focus-within .card,
+/* .alltype .alltypecards:focus-within .card,
 .alltype .alltypecards:hover .card {
   transform: translateX(15%);
 }
 .alltype .alltypecards:focus-within .card,
 .alltype .alltypecards:hover .card {
   transform: translateX(-15%);
-}
+} */
+
+
 .alltype .alltypecards .card:focus,
 .alltype .alltypecards .card:hover {
   transform: translateY(-10px);
   z-index: 2;
 }
 
-.alltype .card:focus ~ .card,
+/* .alltype .card:focus ~ .card,
 .alltype .card:hover ~ .card {
   transform: translate(15%);
-}
+} */
+
 
 header section .alltype .alltypecards .card .rest_card {
     position: absolute;
-    width: 101%;
+    width: 100%;
     height: 110%;
-    outline: none;
-    border: none;
     left: 0;
     top: 0;
     z-index: 999999;
@@ -1309,10 +1310,11 @@ header section .alltype .alltypecards .card .rest_card {
     transition-delay: .44s;
 }
 
-header section .alltype .alltypecards .card .rest_card img {
-    position: relative;
+header section .alltype .alltypecards .card .rest_card video {
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 170px;
+    top: 0;
     border-radius: 8.5px;
     z-index: -1;
 }
@@ -1320,17 +1322,17 @@ header section .alltype .alltypecards .card .rest_card img {
 header section .alltype .alltypecards .card .rest_card::after {
     content: '';
     position: absolute;
-    left: 0;
-    bottom: 0;
     width: 100%;
     height: 100%;
+    left: 0;
+    bottom: 0;
     z-index: 1;
 }
 
 header section .alltype .alltypecards .card .rest_card .cont {
     position: absolute;
-    background: rgb(20, 20, 20);
     width: 100%;
+    background: rgb(20, 20, 20);
     bottom: 10px;
     left: 0;
     color: #fff;
@@ -1428,7 +1430,7 @@ header section .moviestype .moviecards {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) -1))) / var(--per-view));
-    grid-gap: 1.5rem;
+    grid-gap: 1.0rem;
     scroll-behavior: smooth;
     overflow-x: auto;
     left: 0;
@@ -1446,7 +1448,6 @@ header section .moviestype .moviecards .card {
     min-width: 300px;
     height: 180px;
     /* border: 1px solid #fff; */
-    margin-right: 10px;
     background: #000;
     transition: transform 500ms;
     transition-delay: .44s;
@@ -1462,24 +1463,26 @@ header section .moviestype .moviecards .card .posterimage .poster {
     z-index: 999;
 }
 
-.moviestype .moviecards:focus-within .card,
+/* .moviestype .moviecards:focus-within .card,
 .moviestype .moviecards:hover .card {
   transform: translateX(15%);
 }
 .moviestype .moviecards:focus-within .card,
 .moviestype .moviecards:hover .card {
   transform: translateX(-15%);
-}
+} */
+
+
 .moviestype .moviecards .card:focus,
 .moviestype .moviecards .card:hover {
   transform: translateY(-10px);
   z-index: 2;
 }
 
-.moviestype .card:focus ~ .card,
+/* .moviestype .card:focus ~ .card,
 .moviestype .card:hover ~ .card {
   transform: translate(15%);
-}
+} */
 
 
 header section .moviestype .moviecards .card .rest_card {
@@ -1494,10 +1497,11 @@ header section .moviestype .moviecards .card .rest_card {
     transition-delay: .44s;
 }
 
-header section .moviestype .moviecards .card .rest_card img {
-    position: relative;
+header section .moviestype .moviecards .card .rest_card video {
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 170px;
+    top: 0;
     border-radius: 8.5px;
     z-index: -1;
 }
@@ -1613,7 +1617,7 @@ header section .seriestype .seriescards {
     display: flex;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) -1))) / var(--per-view));
-    grid-gap: 1.5rem;
+    grid-gap: 1.0rem;
     scroll-behavior: smooth;
     overflow-x: auto;
     left: 0;
@@ -1629,7 +1633,6 @@ header section .seriestype .seriescards .card {
     height: 180px;
     /* border: 1px solid #fff; */
     border-radius: 8px;
-    margin-right: 10px;
     background: #000;
     transition: transform 500ms;
     transition-delay: .44s;
@@ -1643,24 +1646,26 @@ header section .seriestype .seriescards .card .posterimage .poster {
     z-index: 999;
 }
 
-.seriestype .seriescards:focus-within .card,
+/* .seriestype .seriescards:focus-within .card,
 .seriestype .seriescards:hover .card {
   transform: translateX(15%);
 }
 .seriestype .seriescards:focus-within .card,
 .seriestype .seriescards:hover .card {
   transform: translateX(-15%);
-}
+} */
+
+
 .seriestype .seriescards .card:focus,
 .seriestype .seriescards .card:hover {
   transform: translateY(-10px);
   z-index: 2;
 }
 
-.seriestype .card:focus ~ .card,
+/* .seriestype .card:focus ~ .card,
 .seriestype .card:hover ~ .card {
   transform: translate(15%);
-}
+} */
 
 header section .seriestype .seriescards .card .rest_card {
     position: absolute;
