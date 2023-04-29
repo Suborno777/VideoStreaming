@@ -15,6 +15,20 @@ let moviesseries_type = document.getElementById('movies-series_type');
 let video = document.getElementById('show_video');
 let play = document.getElementsByClassName('playbutton')[0];
 
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+  });
+
+var y = window.matchMedia("(max-width: 900px)");
+if(y.matches){
+    left_btn.style.display = "none";
+    right_btn.style.display = "none";
+    left_btn2.style.display = "none";
+    right_btn2.style.display = "none";
+    left_btn3.style.display = "none";
+    right_btn3.style.display = "none";
+}
+
 // hamburger
 
 const hamburger = document.querySelector(".hamburger");
@@ -53,11 +67,12 @@ let json_url = "movie.json"
 fetch(json_url).then(Response => Response.json())
     .then((data) => {
         data.forEach((ele, i) => {
-            let { name, date, sposter, bposter, genre, type, url } = ele;
+            let { name, date, trailer, bposter, genre, type, open } = ele;
             let card = document.createElement('a');
             card.classList.add('card');
-            card.href = url;
+            card.href = open;
             card.loop = true;
+
             card.innerHTML= `
             <div class="posterimage">
             <img src="${bposter}" alt="${name}" class="poster">
@@ -94,7 +109,7 @@ fetch(json_url).then(Response => Response.json())
     vid.ontimeupdate = function(){ontimevid()};
 
     function ontimevid(){
-        if(vid.currentTime > 1.0){
+        if(vid.currentTime > 0.1){
             document.getElementById('sound').style.display = "block";
         } else {
             document.getElementById('sound').style.display = "none";
@@ -199,11 +214,10 @@ fetch(json_url).then(Response => Response.json())
 
             document.addEventListener("scroll", () => {
                 const nav = document.querySelector("nav");
-
-                if (window.scrollY > 0 == false) {
-                    nav.style.background = "transparent";
+                if (!window.scrollY == 0) {
+                    nav.style.background = "rgb(20, 20, 20)"; 
                 } else {
-                    nav.style.background = "rgb(20, 20, 20)";
+                    nav.style.background = "transparent";
                 }
             })
 
