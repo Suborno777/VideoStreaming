@@ -83,7 +83,7 @@ header .show_image {
     z-index: -999;
 }
 
-header .videovignette {
+/* header .videovignette {
     background: linear-gradient(90deg,#000,transparent 85%);
     bottom: 0;
     left: 0;
@@ -92,6 +92,16 @@ header .videovignette {
     right: 10.09%;
     top: 0;
     transition: opacity .5s;
+} */
+header .videovignette {
+    background: linear-gradient(77deg,rgba(0,0,0,.6),transparent 85%);
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 26.09%;
+    top: 0;
+    transition: opacity .5s
 }
 header .vignette-layer {
     background-color: transparent;
@@ -286,6 +296,12 @@ header nav .logo_ul ul li a:hover{
     }
 }
 @media(max-width: 900px){
+    * {
+        font-size: 16px;
+    }
+    .content {
+        margin-top: 200px;
+    }
     header video {
         position: absolute;
         width: 520%;
@@ -916,6 +932,9 @@ header nav .search_user button {
     background-color: transparent;
     position: absolute;
 }
+header nav .search_user button:hover {
+    font-size: 16px;
+}
 
 .search_input {
     width: 0;
@@ -1035,25 +1054,45 @@ header nav .search_user .search .card .cont p {
 header .content {
     position: relative;
     color: #fff;
+    top: auto;
     font-size: 25px;
-    margin-top: 250px;
+    margin-top: 150px;
     padding-left: 80px;
 }
-header .content h1 {
-    font-size: 50px;
+
+header .content .contImage {
+    margin-bottom: 1.2vw;
+    margin-left: 0;
+    min-height: 5.2vw;
+    position: relative;
+}
+header .content .contImage img {
+    left: 0;
+    bottom: 0;
+    width: 20%;
 }
 header .content .details {
     display: flex;
     align-items: center;
     margin-top: 0px;
+    z-index: 1;
 }
-header .content p {
-    font-size: 10px;
+header .content .detailsAll {
+    color: #fff;
+}
+header .content h1 {
+    font-size: 25px;
     width: 300px;
+    z-index: -1;
+}
+header .content .detailsAll p {
+    color: #fff;
+    font-size: 10px;
+    width: 350px;
 }
 header .content .details h3 {
     color: #fff;
-    font-size: 10px;
+    font-size: 12px;
     margin-right: 5px;
 }
 header .content .details h5 {
@@ -1067,7 +1106,7 @@ header .content .details h4 {
     margin-right: 10px;
 }
 header .content .btn {
-    margin-top: 20px;
+    margin-top: 5px;
     display: flex;
     align-items: center;
 }
