@@ -1075,7 +1075,8 @@ header .content .btn .playbutton {
     -webkit-box-align: center;
     align-items: center;
     appearance: none;
-    border: 0px;
+    border: 2px solid #fff;
+    background: transparent;
     border-radius: 4px;
     font-size: 16px;
     font-weight: bold;
@@ -1084,7 +1085,7 @@ header .content .btn .playbutton {
     -webkit-box-pack: center;
     justify-content: center;
     /* opacity: 1; */
-    padding: 0.7rem;
+    padding: 0.5rem;
     padding-left: 1.4rem;
     padding-right: 1.4rem;
     position: relative;
@@ -1094,9 +1095,63 @@ header .content .btn .playbutton {
     white-space: nowrap;
     margin-right: 10px;
 }
-header .content .btn .playbutton i {
+
+  .playbutton:before {
+    content: '';
+    background: #ffffff;
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: 0.3s linear;
+    z-index: -1;
+  }
+  .playbutton:hover:before {
+    width: 100%;
+  }
+  header .content .btn .playbutton:hover a {
+    color: #000;
+  }
+  .download_main:before {
+    content: '';
+    background: #fff;
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: 0.3s linear;
+    z-index: -1;
+  }
+  .download_main:hover:before {
+    width: 100%;
+  }
+  header .content .btn .download_main:hover a {
+    color: #000;
+  }
+header .content .btn .download_main i {
     width: 100%;
     height: 100%;
+}
+header .content .btn .playbutton a {
+    -webkit-box-align: center;
+    align-items: center;
+    appearance: none;
+    border: 0px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    opacity: 1;
+    position: relative;
+    user-select: none;
+    text-decoration: none;
+    will-change: background-color, color;
+    word-break: break-word;
+    white-space: nowrap;
 }
 header .content .btn .download_main {
     -webkit-box-align: center;
@@ -1106,12 +1161,13 @@ header .content .btn .download_main {
     border-radius: 4px;
     font-size: 16px;
     font-weight: bold;
-    padding: 0.7rem;
+    border: 2px solid #fff;
+    padding: 0.5rem;
     padding-left: 1.4rem;
     padding-right: 1.4rem;
     cursor: pointer;
     display: flex;
-    background-color: rgba(109, 109, 110, 0.7);
+    background: transparent;
     justify-content: center;
     position: relative;
     user-select: none;
@@ -1119,6 +1175,7 @@ header .content .btn .download_main {
     word-break: break-word;
     white-space: nowrap;
 }
+
 header .content .btn .download_main a {
     -webkit-box-align: center;
     align-items: center;
@@ -1153,10 +1210,9 @@ header .content .btnsound button {
     font-weight: 600;
     background-color: transparent;
     border-radius: 50%;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     color: #fff;
     cursor: pointer;
-    transition: .5s;
     -webkit-box-align: center;
     align-items: center;
     appearance: none;
@@ -1178,15 +1234,10 @@ header .content .btnsound button {
     word-break: break-word;
     white-space: nowrap;
 }
-header .content .btnsound button .svg {
-    border: none;
-}
-header .content .btnsound button .svg i {
-    height: 100%;
-    width: 100%;
-}
 header .content .btnsound button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    border: 2px solid #000;
 }
 
 header .content .btnsound .rate {
@@ -1206,19 +1257,13 @@ header .content .btn .playicon {
     color: #fff;
     fill: #fff;
 }
-header .content .btn .playbutton:hover {
-    opacity: .6;
-}
-header .content .btn .download_main:hover {
-    opacity: .6;
-}
 
 
 
 
 header section .alltype {
     position: absolute;
-    width: 100%;
+    width: 103%;
     height: auto;
     padding: 0px 50px;
     bottom: 460px;
@@ -1276,31 +1321,31 @@ header section .alltype .alltypecards .card .posterimage .poster {
 }
 
 
-/* .alltype .alltypecards:focus-within .card,
+.alltype .alltypecards:focus-within .card,
 .alltype .alltypecards:hover .card {
   transform: translateX(15%);
 }
 .alltype .alltypecards:focus-within .card,
 .alltype .alltypecards:hover .card {
   transform: translateX(-15%);
-} */
+}
 
 
 .alltype .alltypecards .card:focus,
 .alltype .alltypecards .card:hover {
-  transform: translateY(-10px);
+  transform: scale(1.044);
   z-index: 2;
 }
 
-/* .alltype .card:focus ~ .card,
+.alltype .card:focus ~ .card,
 .alltype .card:hover ~ .card {
   transform: translate(15%);
-} */
+}
 
 
 header section .alltype .alltypecards .card .rest_card {
     position: absolute;
-    width: 100%;
+    width: 103%;
     height: 110%;
     left: 0;
     top: 0;
@@ -1332,12 +1377,33 @@ header section .alltype .alltypecards .card .rest_card::after {
 header section .alltype .alltypecards .card .rest_card .cont {
     position: absolute;
     width: 100%;
-    background: rgb(20, 20, 20);
-    bottom: 10px;
+    background: linear-gradient(90deg,#000,transparent 100%);
+    bottom: 17px;
     left: 0;
     color: #fff;
     padding: 0px 20px;
 }
+
+header section .alltype .alltypecards .card .rest_card .cont .more {
+    position: absolute;
+    width: 100%;
+    left: 250px;
+    font-size: 30px;
+    top: 0px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 2;
+    transition: all .3s;
+}
+header section .alltype .alltypecards .card .rest_card .cont .more a {
+    text-decoration: none;
+    color: #fff;
+}
+header section .alltype .alltypecards .card .rest_card .cont .more:hover {
+    color: #fafafa;
+}
+
 
 header section .alltype .alltypecards .card .rest_card .cont .sub {
     width: 100%;
@@ -1375,7 +1441,7 @@ header section .alltype .bi-chevron-left{
 }
 header section .alltype .bi-chevron-right {
     left: unset;
-    right: 3%;
+    right: 5%;
     font-size: 50px;
     background: none;
     position: absolute;
@@ -1412,7 +1478,7 @@ header section:hover .alltype .bi-chevron-left {
 
 header section .moviestype {
     position: absolute;
-    width: 100%;
+    width: 103%;
     height: auto;
     padding: 0px 50px;
     bottom: 230px;
@@ -1463,26 +1529,26 @@ header section .moviestype .moviecards .card .posterimage .poster {
     z-index: 999;
 }
 
-/* .moviestype .moviecards:focus-within .card,
+.moviestype .moviecards:focus-within .card,
 .moviestype .moviecards:hover .card {
   transform: translateX(15%);
 }
 .moviestype .moviecards:focus-within .card,
 .moviestype .moviecards:hover .card {
   transform: translateX(-15%);
-} */
+}
 
 
 .moviestype .moviecards .card:focus,
 .moviestype .moviecards .card:hover {
-  transform: translateY(-10px);
+  transform: scale(1.044);
   z-index: 2;
 }
 
-/* .moviestype .card:focus ~ .card,
+.moviestype .card:focus ~ .card,
 .moviestype .card:hover ~ .card {
   transform: translate(15%);
-} */
+}
 
 
 header section .moviestype .moviecards .card .rest_card {
@@ -1519,11 +1585,31 @@ header section .moviestype .moviecards .card .rest_card::after {
 header section .moviestype .moviecards .card .rest_card .cont {
     position: absolute;
     width: 100%;
-    background: rgb(20, 20, 20);
-    bottom: 10px;
+    background: linear-gradient(90deg,#000,transparent 100%);
+    bottom: 17px;
     left: 0;
     color: #fff;
     padding: 0px 20px;
+}
+
+header section .moviestype .moviecards .card .rest_card .cont .more {
+    position: absolute;
+    width: 100%;
+    left: 250px;
+    font-size: 30px;
+    top: 0px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 2;
+    transition: all .3s;
+}
+header section .moviestype .moviecards .card .rest_card .cont .more a {
+    text-decoration: none;
+    color: #fff;
+}
+header section .moviestype .moviecards .card .rest_card .cont .more:hover {
+    color: #fafafa;
 }
 
 header section .moviestype .moviecards .card .rest_card .cont .sub {
@@ -1562,7 +1648,7 @@ header section .moviestype .bi-chevron-left{
 }
 header section .moviestype .bi-chevron-right {
     left: unset;
-    right: 3%;
+    right: 5%;
     font-size: 50px;
     background: none;
     position: absolute;
@@ -1598,7 +1684,7 @@ header section:hover .moviestype .bi-chevron-left {
 
 header section .seriestype {
     position: absolute;
-    width: 100%;
+    width: 103%;
     height: auto;
     padding: 0px 50px;
     bottom: 0;
@@ -1646,26 +1732,26 @@ header section .seriestype .seriescards .card .posterimage .poster {
     z-index: 999;
 }
 
-/* .seriestype .seriescards:focus-within .card,
+.seriestype .seriescards:focus-within .card,
 .seriestype .seriescards:hover .card {
   transform: translateX(15%);
 }
 .seriestype .seriescards:focus-within .card,
 .seriestype .seriescards:hover .card {
   transform: translateX(-15%);
-} */
+}
 
 
 .seriestype .seriescards .card:focus,
 .seriestype .seriescards .card:hover {
-  transform: translateY(-10px);
+  transform: scale(1.044);
   z-index: 2;
 }
 
-/* .seriestype .card:focus ~ .card,
+.seriestype .card:focus ~ .card,
 .seriestype .card:hover ~ .card {
   transform: translate(15%);
-} */
+}
 
 header section .seriestype .seriescards .card .rest_card {
     position: absolute;
@@ -1700,11 +1786,31 @@ header section .seriestype .seriescards .card .rest_card::after {
 header section .seriestype .seriescards .card .rest_card .cont {
     position: absolute;
     width: 100%;
-    background: rgb(20, 20, 20);
-    bottom: 10px;
+    background: linear-gradient(90deg,#000,transparent 100%);
+    bottom: 17px;
     left: 0;
     color: #fff;
     padding: 0px 20px;
+}
+
+header section .seriestype .seriescards .card .rest_card .cont .more {
+    position: absolute;
+    width: 100%;
+    left: 250px;
+    font-size: 30px;
+    top: 0px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 2;
+    transition: all .3s;
+}
+header section .seriestype .seriescards .card .rest_card .cont .more a {
+    text-decoration: none;
+    color: #fff;
+}
+header section .seriestype .seriescards .card .rest_card .cont .more:hover {
+    color: #fafafa;
 }
 
 header section .seriestype .seriescards .card .rest_card .cont .sub {
@@ -1743,7 +1849,7 @@ header section .seriestype .bi-chevron-left{
 }
 header section .seriestype .bi-chevron-right {
     left: unset;
-    right: 3%;
+    right: 5%;
     font-size: 50px;
     background: none;
     position: absolute;
