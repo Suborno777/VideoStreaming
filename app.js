@@ -4,9 +4,12 @@ let left_btn2 = document.getElementById('chevron-left2');
 let right_btn2 = document.getElementById('chevron-right2');
 let left_btn3 = document.getElementById('chevron-left3');
 let right_btn3 = document.getElementById('chevron-right3');
+let left_btn4 = document.getElementById('chevron-left4');
+let right_btn4 = document.getElementById('chevron-right4');
 let cards = document.getElementsByClassName('alltypecards')[0];
 let cards_2 = document.getElementsByClassName('moviecards')[0]
 let cards_3 = document.getElementsByClassName('seriescards')[0]
+let cards_4 = document.getElementsByClassName('trendingcards')[0]
 let search = document.getElementsByClassName('search_user')[0];
 var searcharea = document.getElementsByClassName('searcharea')[0];
 var search_input = document.getElementById('search_input');
@@ -81,14 +84,21 @@ left_btn3.addEventListener('click', ()=> {
 right_btn3.addEventListener('click', ()=> {
     cards_3.scrollLeft += 1565;
 })
+left_btn4.addEventListener('click', ()=> {
+    cards_4.scrollLeft -= 1565;
+})
+right_btn4.addEventListener('click', ()=> {
+    cards_4.scrollLeft += 1565;
+})
 
 
 let json_url = "movie.json"
 fetch(json_url).then(Response => Response.json())
     .then((data) => {
         data.forEach((ele, i) => {
-            let { name, date, url, logo, bposter, genre, type, open } = ele;
+            let { name, date, url, trending, bposter, genre, type, open } = ele;
             let card = document.createElement('a');
+            card.style.cursor = 'pointer';
             card.classList.add('card');
             card.href = url;
             card.loop = true;
@@ -111,7 +121,7 @@ fetch(json_url).then(Response => Response.json())
         cards.appendChild(card);
     });
 
-    let random_array = Math.floor((Math.random() * 13));
+    let random_array = Math.floor(Math.random() * 15);
     
 
     var x = window.matchMedia("(max-width: 900px)");
@@ -272,8 +282,9 @@ fetch(json_url).then(Response => Response.json())
                 });
 
                 series_array.forEach((ele, i) => {
-                    let { name, date, sposter, bposter, genre, type, url } = ele;
+                    let { name, date, trending, bposter, genre, type, url } = ele;
                     let card = document.createElement('a');
+                    card.style.cursor = 'pointer';
                     card.classList.add('card');
                     card.href = url;
                     card.innerHTML= `
@@ -291,8 +302,37 @@ fetch(json_url).then(Response => Response.json())
                 moviesseries_type.innerText = 'Series';
                 cards_3.appendChild(card);
             });
-            })
 
+                
+            })
+let trending_array = data.filter(ele => {
+                    return ele.trending == "true";
+                });
+
+                trending_array.forEach((ele, i) => {
+                    let { name, date, bposter, genre, type, url } = ele;
+                    let card = document.createElement('a');
+                    card.style.cursor = 'pointer';
+                    card.classList.add('card');
+                    card.href = url;
+                    card.innerHTML= `
+                    <div class="posterimage">
+                    <img src="${bposter}" alt="${name}" class="poster">
+                    </div>
+                                <div class="rest_card">
+                                    <div class="cont">
+                                        <h4>${name}</h4>
+                                        <div class="sub">
+                                        <p>${genre}, ${date}, ${type}</p>
+                                    </div>
+                                    <div class="more"><a id="openmore" href="${open}"><i class="bi bi-play-circle"></i></a></div>
+                                </div>
+                                    </div>
+                                </div>
+                `
+                movies_type.innerText = 'Trending';
+                cards_4.appendChild(card);
+            });
                 let moviecards = data.filter(ele => {
                     return ele.type == "movie";
                 });
@@ -300,6 +340,7 @@ fetch(json_url).then(Response => Response.json())
                 moviecards.forEach((ele, i) => {
                     let { name, date, open, bposter, genre, type, url } = ele;
                     let card = document.createElement('a');
+                    card.style.cursor = 'pointer';
                     card.classList.add('card');
                     card.href = url;
                     card.innerHTML= `
@@ -329,6 +370,7 @@ fetch(json_url).then(Response => Response.json())
                 seriescards.forEach((ele, i) => {
                     let { name, date, open, bposter, genre, type, url } = ele;
                     let card = document.createElement('a');
+                    card.style.cursor = 'pointer';
                     card.classList.add('card');
                     card.href = url;
                     card.innerHTML= `
