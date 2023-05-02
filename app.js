@@ -15,9 +15,29 @@ let moviesseries_type = document.getElementById('movies-series_type');
 let video = document.getElementById('show_video');
 let play = document.getElementsByClassName('playbutton')[0];
 
-$(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
-  });
+document.getElementById('title').style.display = 'flex';
+
+$(window).on('load', function() {
+    const nav = document.querySelector("nav");
+            if (!window.scrollY == 0) {
+                    nav.style.background = "rgb(20, 20, 20)"; 
+            } else {
+                    nav.style.background = "transparent";
+            }
+
+            var contImage = document.getElementsByClassName('contImage')[0];
+            contImage.style.transformOrigin = 'left bottom';
+            contImage.style.transform = 'scale(0.8) translate3d(0px, 80px, 0px)';
+            contImage.style.transitionDuration = '1200ms';
+            contImage.style.transitionDelay = '5000ms';
+
+
+            var cont = document.getElementsByClassName('detailsAll')[0];
+            cont.style.opacity = '0';
+            cont.style.transitionDuration = '500ms';
+            cont.style.transitionDelay = '5000ms';
+
+            })
 
 var y = window.matchMedia("(max-width: 900px)");
 if(y.matches){
@@ -42,24 +62,24 @@ hamburger.addEventListener('click', () => {
 
 
 left_btn.addEventListener('click', ()=> {
-    cards.scrollLeft -= 1000;
+    cards.scrollLeft -= 1565;
 })
 right_btn.addEventListener('click', ()=> {
-    cards.scrollLeft += 1000;
+    cards.scrollLeft += 1565;
 })
 
 
 left_btn2.addEventListener('click', ()=> {
-    cards_2.scrollLeft -= 1000;
+    cards_2.scrollLeft -= 1565;
 })
 right_btn2.addEventListener('click', ()=> {
-    cards_2.scrollLeft += 1000;
+    cards_2.scrollLeft += 1565;
 })
 left_btn3.addEventListener('click', ()=> {
-    cards_3.scrollLeft -= 1000;
+    cards_3.scrollLeft -= 1565;
 })
 right_btn3.addEventListener('click', ()=> {
-    cards_3.scrollLeft += 1000;
+    cards_3.scrollLeft += 1565;
 })
 
 
@@ -67,7 +87,7 @@ let json_url = "movie.json"
 fetch(json_url).then(Response => Response.json())
     .then((data) => {
         data.forEach((ele, i) => {
-            let { name, date, url, bposter, genre, type, open } = ele;
+            let { name, date, url, logo, bposter, genre, type, open } = ele;
             let card = document.createElement('a');
             card.classList.add('card');
             card.href = url;
@@ -91,9 +111,9 @@ fetch(json_url).then(Response => Response.json())
         cards.appendChild(card);
     });
 
-    let random_array = Math.floor(Math.random() * 12);
+    let random_array = Math.floor((Math.random() * 13));
     
-    document.getElementById('title').innerText = data[random_array].name;
+
     var x = window.matchMedia("(max-width: 900px)");
     function widthfunc (x){}
     if(x.matches){
@@ -120,10 +140,10 @@ fetch(json_url).then(Response => Response.json())
     document.getElementsByTagName('video')[0].volume = 0.3;
     document.getElementsByClassName('rating')[0].innerText = data[random_array].rate;
     document.getElementById('play_video').href = data[random_array].open;
+    document.getElementById('title').src = data[random_array].logo;
     document.getElementById('det').innerText = data[random_array].detail;
     document.getElementById('gen').innerText = data[random_array].genre;
     document.getElementById('date').innerText = data[random_array].date;
-
 
 
     const imageWrapper = document.querySelector('.alltypecards')
