@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 body {
     width: 100%;
     height: 150vh;
@@ -1079,6 +1084,7 @@ header .content .details {
 }
 header .content .detailsAll {
     color: #fff;
+    cursor: default;
 }
 header .content h1 {
     font-size: 25px;
