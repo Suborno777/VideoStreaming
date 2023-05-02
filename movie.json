@@ -1,5 +1,6 @@
 [{
     "name": "Ant Man",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/38/Ant-Man_%28Film%29_Logo.png",
     "date": "2017",
     "sposter": "img/ant man.jpg",
     "bposter": "img/ant man1.jpg",
@@ -12,6 +13,7 @@
     "open": "open/ant man play.html"
 }, {
     "name": "Jurassic World Dominion",
+    "logo": "https://www.themoviedb.org/t/p/original/ut0M6al21x1SfgZj9bxz9ZiUrPn.png",
     "date": "2022",
     "sposter": "img/jurassic world.jpg",
     "bposter": "img/jurassic world1.jpg",
@@ -24,6 +26,7 @@
     "open": "open/jurassic world play.html"
 }, {
     "name": "Jumanji",
+    "logo": "https://occ-0-3351-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABawHfaoyN9nhjeSUV9ITuTGjtXDcE0zwgOQAGmqhbl8xf5KZ07ot1sLUijHe_9ioDU66aTxR9_vrVvujtGcZBxEkqwuHaak0pra3K5LVeLs.webp?r=5d0",
     "date": "2017",
     "sposter": "img/jumanji pt1.jpg",
     "bposter": "img/jumanji pt1(1).jpg",
@@ -36,6 +39,7 @@
     "open": "open/jumanji pt1 play.html"
 }, {
     "name": "Avengers",
+    "logo": "https://www.freepnglogos.com/uploads/avengers-png-logo/avengers-logo-png-transparent-avengers-logo-images-7.png",
     "date": "2012",
     "sposter": "img/avengers.jpg",
     "bposter": "img/avengers1.jpg",
@@ -48,6 +52,7 @@
     "open": "open/avengers play.html"
 }, {
     "name": "Uncharted",
+    "logo": "https://occ-0-3351-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABb0loYSZpmtv0o4NIXKIocow_Wiajk5wBRpe2W2B2lDEfDjM927PRv3kmk7_x-06nrJTc7K-1AiOl0yCiw7BcWYTt5hSZ8FG9CP0UafXjmI.webp?r=5ff",
     "date": "2022",
     "sposter": "img/uncharted.webp",
     "bposter": "img/uncharted1.jpg",
@@ -60,6 +65,7 @@
     "open": "open/uncharted play.html"
 }, {
     "name": "Shadow And Bone",
+    "logo": "https://www.etonline.com/sites/default/files/styles/max_970x546/public/images/2020-12/unnamed_0.png?h=c66d06c9&itok=GlFPu_0F",
     "date": "2022",
     "sposter": "img/shadow and bone s1(1).jpg",
     "bposter": "img/shadow and bone s1(2).jpg",
@@ -72,6 +78,7 @@
     "open": "open/shadow and bone s1 play.html"
 }, {
     "name": "Stranger Things",
+    "logo": "https://occ-0-3351-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABSNUzoP8HHEMoUSYEp5GdQ92BwmUzjENlcVRytYB-9zH3CWjN1d3IEkLGjB8njlIALYjHH8NG9eT0k876YHi9_JtUIJCaG9ZXHcEC26sYbfa-GlUN6Xyuvg5dqpkUDPvoUvTLYssGgkv0YErnLL1LEzancT6V39BpxajPFO7uP1Q_SpE-D4E.webp?r=23b",
     "date": "2016",
     "sposter": "img/stranger things s1(1).jpg",
     "bposter": "img/stranger things s1(2).jpg",
@@ -84,6 +91,7 @@
     "open": "open/stranger things s1 play.html"
 }, {
     "name": "Top Gun",
+    "logo": "https://1000logos.net/wp-content/uploads/2022/11/Top-Gun-Logo-500x281.png",
     "date": "2022",
     "sposter": "img/topgun.jpg",
     "bposter": "img/topgun1.jpg",
@@ -96,6 +104,7 @@
     "open": "open/top gun play.html"
 }, {
     "name": "Thor Love And Thunder",
+    "logo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/846a9086-8a40-43e0-aa10-2fc7d6d73730/deaml8h-951ead38-2ff8-4206-9cb5-3744b808bf21.png/v1/fill/w_1239,h_645/thor_love_and_thunder_logo_png__by_mintmovi3_deaml8h-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjY3IiwicGF0aCI6IlwvZlwvODQ2YTkwODYtOGE0MC00M2UwLWFhMTAtMmZjN2Q2ZDczNzMwXC9kZWFtbDhoLTk1MWVhZDM4LTJmZjgtNDIwNi05Y2I1LTM3NDRiODA4YmYyMS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.7DBam_C7z2gWAgOK_NaXnsim30zdxNz1WhOGiwzWDpg",
     "date": "2022",
     "sposter": "img/thor love of thunder.jpg",
     "bposter": "img/thor love of thunder1.avif",
@@ -108,6 +117,7 @@
     "open": "open/thor love and thunder play.html"
 }, {
     "name": "Moon Knight",
+    "logo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a58a7719-0dcf-4e0b-b7bb-d2b725dbbb8e/df2rgzf-b8ebf0ff-80dd-453f-8309-3ab820b2a3f3.png/v1/fill/w_1193,h_670/moon_knight_logo_png_hd_2022_by_andrewvm_df2rgzf-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjkyIiwicGF0aCI6IlwvZlwvYTU4YTc3MTktMGRjZi00ZTBiLWI3YmItZDJiNzI1ZGJiYjhlXC9kZjJyZ3pmLWI4ZWJmMGZmLTgwZGQtNDUzZi04MzA5LTNhYjgyMGIyYTNmMy5wbmciLCJ3aWR0aCI6Ijw9MTIzMiJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.TiFPo2dlxQe22d3_R3_q_dmmz2J-MXyhNd0rja4hiqY",
     "date": "2022",
     "sposter": "img/moon knight.jpg",
     "bposter": "img/moon knight1.webp",
@@ -115,11 +125,12 @@
     "type": "series",
     "url": "moon knight.html",
     "rate": "U/A 16+",
-    "detail": "",
+    "detail": "Steven Grant and mercenary Marc Spector investigate the mysteries of the Egyptian gods from inside the same body.",
     "trailer": "video/john wick trailer.mp4",
     "open": "open/moon knight play.html"
 }, {
     "name": "Kota Factory",
+    "logo": "https://occ-0-3351-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABYKs7b-Qv-EEDwWEqdY7r7AkuUur-xkb6GRezxO4WE0VoPJ2YumBsWuo1AuNG0IawM7lBreLA4oOryVuM6zbD3Y3WE6ZjT4T2n2TlPz7fkpK4buWQw-fJ2l_Yrhf-MWaIlDG3iokzIqSd9QYGtEcyQ2WW1OnOLl4m-WPAMOB9JkDGxjuQcId.webp?r=20b",
     "date": "2020",
     "sposter": "img/kota factory.jpg",
     "bposter": "img/kota factory1.webp",
@@ -131,19 +142,8 @@
     "trailer": "video/kota factory trailer.mp4",
     "open": "open/kota factory play.html"
 }, {
-    "name": "The Boys",
-    "date": "2022",
-    "sposter": "img/the boys.jpg",
-    "bposter": "img/the boys1.jpg",
-    "genre": "Action",
-    "type": "series",
-    "url": "the boys.html",
-    "rate": "A",
-    "detail": "",
-    "trailer": "video/john wick.mp4",
-    "open": "open/the boys play.html"
-}, {
     "name": "Eternals",
+    "logo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/846a9086-8a40-43e0-aa10-2fc7d6d73730/ddcgjs7-2b2969b0-3386-4aff-a1a4-2e44aa633300.png/v1/fill/w_1280,h_570/marvel_studios__eternals__2021__logo_png__2_by_mintmovi3_ddcgjs7-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTcwIiwicGF0aCI6IlwvZlwvODQ2YTkwODYtOGE0MC00M2UwLWFhMTAtMmZjN2Q2ZDczNzMwXC9kZGNnanM3LTJiMjk2OWIwLTMzODYtNGFmZi1hMWE0LTJlNDRhYTYzMzMwMC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.HIzA22EIqRbseOKcA17tVaHE8SB9N1U9ZaOHKa-9x4s",
     "date": "2022",
     "sposter": "img/eternals.jpg",
     "bposter": "img/eternals1.webp",
@@ -151,11 +151,12 @@
     "type": "movie",
     "url": "eternals.html",
     "rate": "U/A 13+",
-    "detail": "",
+    "detail": "The Eternals, a race of immortal beings with superhuman powers who have secretly lived on Earth for thousands of years, reunite to battle the evil Deviants.",
     "trailer": "video/john wick trailer.mp4",
     "open": "open/eternals play.html"
 }, {
     "name": "Spider Man : No Way Home",
+    "logo": "https://image.tmdb.org/t/p/original/dEFxlY8tBr3MfcofIJKzqQKVe6B.png",
     "date": "2020",
     "sposter": "img/spiderman.jpg",
     "bposter": "img/spiderman1.jpg",
@@ -163,12 +164,13 @@
     "type": "movie",
     "url": "spiderman.html",
     "rate": "U/A 13+",
-    "detail": "",
+    "detail": "Spider-Man seeks the help of Doctor Strange to forget his exposed secret identity as Peter Parker. However, Strange's spell goes horribly wrong, leading to unwanted guests entering their universe.",
     "trailer": "video/john wick trailer.mp4",
     "open": "open/spiderman play.html"
 }, 
  {
     "name": "Money Heist",
+    "logo": "https://occ-0-3351-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABbVBZZI4ewNxMH5D6oTe7AiwHg0WjmMUwC7nJ0w2SFZO2YWN7BXiEu6BV80gef6qcE0rT65M2UP7TGdKroEWmGZg7W1wxug75fMpQrCx68G2rIyXtoYE_F6ea_OrDddy_KtGDvt0Lx7dekH-AQRoAtH8vCKeXyMYSIfSH7iBXdPn1D8cSj1o.webp?r=768",
     "date": "2020",
     "sposter": "img/money heist.jpg",
     "bposter": "img/money heist1.jpg",
