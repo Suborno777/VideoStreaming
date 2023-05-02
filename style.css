@@ -14,7 +14,7 @@ a {
 
 body {
     width: 100%;
-    height: 150vh;
+    height: 190vh;
     font-family: 'poppins', sans-serif;
     background: rgb(20,20,20);
     display: flex;
@@ -61,13 +61,23 @@ img {
 }
 
 
-header video {
+/* header video {
     position: absolute;
     width: 120%;
-    height: 200%;
-    top: -70%;
+    height: 100%;
+    top: -25%;
     right: 0;
     z-index: -3;
+} */
+header video {
+    top: -500px;
+    height: 110%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: -4;
 }
 
 
@@ -115,9 +125,9 @@ header .vignette-layer {
     top: 0;
     right: 0;
     background-repeat: repeat-x;
-    background-size: 100% 100%;
-    bottom: 460px;
-    height: 14.7vw;
+    background-size: 110% 110%;
+    bottom: 690px;
+    height: 24.7vw;
     opacity: 1;
     top: auto;
     width: 100%;
@@ -303,6 +313,9 @@ header nav .logo_ul ul li a:hover{
 @media(max-width: 900px){
     * {
         font-size: 16px;
+    }
+    body {
+        height: 150vh;
     }
     .content {
         margin-top: 200px;
@@ -826,6 +839,10 @@ header nav .logo_ul ul li a:hover{
         color: #fff;
         margin-top: 125px;
     }
+
+    body {
+        height: 150vh;
+    }
     .search{
         font-size: 20px;
         /* border: 1px solid #fff; */
@@ -1311,7 +1328,7 @@ header section .alltype {
     width: 103%;
     height: auto;
     padding: 0px 50px;
-    bottom: 460px;
+    bottom: 690px;
     color: #fff;
     overflow-y: visible;
     /* background: rgb(20,20,20); */
@@ -1526,7 +1543,7 @@ header section .moviestype {
     width: 103%;
     height: auto;
     padding: 0px 50px;
-    bottom: 230px;
+    bottom: 460px;
     color: #fff;
     background: rgb(20,20,20);
     z-index: 2;
@@ -1732,7 +1749,7 @@ header section .seriestype {
     width: 103%;
     height: auto;
     padding: 0px 50px;
-    bottom: 0;
+    bottom: 230px;
     color: #fff;
     background: rgb(20,20,20);
     z-index: 2;
@@ -1928,11 +1945,218 @@ header section:hover .seriestype .bi-chevron-left {
     opacity: 1;
 }
 
+
+header section .trending {
+    position: absolute;
+    width: 103%;
+    height: auto;
+    padding: 0px 50px;
+    bottom: 0;
+    color: #fff;
+    background: rgb(20,20,20);
+    z-index: 2;
+}
+
+header section .trending .trendingcards {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid #fff; */
+    margin-top: 10px;
+    display: flex;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) -1))) / var(--per-view));
+    grid-gap: 1.0rem;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    left: 0;
+    transition: .3s;
+}
+header section .trending .trendingcards::-webkit-scrollbar {
+    display: none;
+}
+
+header section .trending .trendingcards .card {
+    position: relative;
+    min-width: 300px;
+    height: 180px;
+    /* border: 1px solid #fff; */
+    /* border-radius: 8px; */
+    background: #000;
+    transition: transform 500ms;
+    transition-delay: .44s;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+header section .trending .trendingcards .card .posterimage .poster {
+    width: 100%;
+    height: 180px;
+    /* border-radius: 8px; */
+    position: relative;
+    z-index: 999;
+}
+
+.trending .trendingcards:focus-within .card,
+.trending .trendingcards:hover .card {
+  transform: translateX(15%);
+}
+.trending .trendingcards:focus-within .card,
+.trending .trendingcards:hover .card {
+  transform: translateX(-15%);
+}
+
+
+.trending .trendingcards .card:focus,
+.trending .trendingcards .card:hover {
+  transform: scale(1.044);
+  z-index: 2;
+}
+
+.trending .card:focus ~ .card,
+.trending .card:hover ~ .card {
+  transform: translate(15%);
+}
+
+header section .trending .trendingcards .card .rest_card {
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: .44s;
+}
+
+header section .trending .trendingcards .card .rest_card img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8.5px;
+    z-index: -1;
+}
+
+header section .trending .trendingcards .card .rest_card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+header section .trending .trendingcards .card .rest_card .cont {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(90deg,#000,transparent 100%);
+    bottom: 17px;
+    left: 0;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+header section .trending .trendingcards .card .rest_card .cont .more {
+    position: absolute;
+    width: 100%;
+    left: 250px;
+    font-size: 30px;
+    top: 0px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 2;
+    transition: all .3s;
+}
+header section .trending .trendingcards .card .rest_card .cont .more a {
+    text-decoration: none;
+    color: #fff;
+}
+header section .trending .trendingcards .card .rest_card .cont .more:hover {
+    color: #fafafa;
+}
+
+header section .trending .trendingcards .card .rest_card .cont .sub {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header section .trending .trendingcards .card .rest_card .cont .sub p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+header section .trending .trendingcards .card:hover .rest_card {
+    opacity: 1;
+}
+
+header section .trending .bi-chevron-left{
+    position: absolute;
+    top: 50%;
+    left: 10;
+    width: 25px;
+    height: 25px;
+    /* background:rgb(255, 255, 255, .3); */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 50px;
+    cursor: pointer;
+    transition: .3s width, .3s opacity;
+    z-index: 999999999;
+    opacity: 0;
+}
+header section .trending .bi-chevron-right {
+    left: unset;
+    right: 5%;
+    font-size: 50px;
+    background: none;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 50px;
+    cursor: pointer;
+    transition: .3s width, .3s opacity;
+    z-index: 999999999;
+    opacity: 0;
+}
+header section:hover .trending .bi-chevron-right {
+    opacity: 1;
+}
+
+header section .trending .bi-chevron-right:hover {
+    font-size: 60px;
+}
+header section .trending .bi-chevron-left:hover {
+    font-size: 60px;
+}
+
+header section:hover .trending .bi-chevron-left {
+    opacity: 1;
+}
+
 @media screen and (max-width: 1250px){
     header video {
         left: -50%;
         width: 250%;
         height: 200%;
+        top: -60%;
+    }
+
+    body {
+        height: 170vh;
     }
     
     header .show_image {
@@ -1950,12 +2174,355 @@ header section:hover .seriestype .bi-chevron-left {
         right: 0;
         background-repeat: repeat-x;
         background-size: 100% 100%;
-        bottom: 460px;
+        bottom: 600px;
+        height: 30.7vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 100% 100%;
+        bottom: 650px;
         height: 24.7vw;
         opacity: 8;
         top: auto;
         width: 200%;
         z-index: 2;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 200%;
+        top: -70%;
+    }
+}
+@media screen and (max-width: 920px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 100% 100%;
+        bottom: 670px;
+        height: 24.7vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 2;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 200%;
+        top: -70%;
+    }
+}
+@media screen and (max-width: 720px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 110% 110%;
+        bottom: 690px;
+        height: 40.7vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 2;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 210%;
+        top: -80%;
+    }
+}
+@media screen and (max-width: 700px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 110% 110%;
+        bottom: 690px;
+        height: 50.7vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 2;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 210%;
+        top: -80%;
+    }
+}
+@media screen and (max-width: 680px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 110% 110%;
+        bottom: 690px;
+        height: 60.7vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 2;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 210%;
+        top: -80%;
+    }
+}
+@media screen and (max-width: 660px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 110% 110%;
+        bottom: 690px;
+        height: 70.7vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 2;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 210%;
+        top: -80%;
+    }
+}
+@media screen and (max-width: 640px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 110% 110%;
+        bottom: 690px;
+        height: 90.7vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 2;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 210%;
+        top: -80%;
+    }
+}
+@media screen and (max-width: 550px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 110% 110%;
+        bottom: 690px;
+        height: 90.7vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 2;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 230%;
+        top: -90.8%;
+    }
+}
+@media screen and (max-width: 1510px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 110% 110%;
+        bottom: 690px;
+        height: 30.7vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 2;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 230%;
+        top: -120%;
+    }
+}
+@media screen and (max-width: 1400px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 110% 110%;
+        bottom: 690px;
+        height: 20.999vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 1;
+    }
+    body {
+        height: 200vh;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 230%;
+        top: -85%;
+    }
+}
+@media screen and (max-width: 1700px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 110% 110%;
+        bottom: 690px;
+        height: 20.999vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 1;
+    }
+    body {
+        height: 200vh;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 230%;
+        top: -85%;
+    }
+}
+@media screen and (max-width: 1050px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 110% 110%;
+        bottom: 690px;
+        height: 110.999vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 1;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 250%;
+        top: -100%;
+    }
+}
+@media screen and (max-width: 560px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 110% 110%;
+        bottom: 690px;
+        height: 70.7vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 2;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 230%;
+        top: -90.8%;
+    }
+}
+@media screen and (max-width: 556px) {
+    header .vignette-layer {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        /* background-position: 100 bottom; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-repeat: repeat-x;
+        background-size: 110% 110%;
+        bottom: 690px;
+        height: 70.7vw;
+        opacity: 8;
+        top: auto;
+        width: 200%;
+        z-index: 2;
+    }
+    header video {
+        left: -50%;
+        width: 250%;
+        height: 230%;
+        top: -80%;
     }
 }
 @media screen and (max-width: 360px){
