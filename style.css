@@ -1690,7 +1690,6 @@ header section .seriestype {
     bottom: 0;
     color: #fff;
     background: rgb(20,20,20);
-    overflow-x: hidden;
     z-index: 2;
 }
 
@@ -1722,6 +1721,8 @@ header section .seriestype .seriescards .card {
     background: #000;
     transition: transform 500ms;
     transition-delay: .44s;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 header section .seriestype .seriescards .card .posterimage .poster {
