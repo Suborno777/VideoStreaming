@@ -67,23 +67,24 @@ let json_url = "movie.json"
 fetch(json_url).then(Response => Response.json())
     .then((data) => {
         data.forEach((ele, i) => {
-            let { name, date, trailer, bposter, genre, type, open } = ele;
+            let { name, date, url, bposter, genre, type, open } = ele;
             let card = document.createElement('a');
             card.classList.add('card');
-            card.href = open;
+            card.href = url;
             card.loop = true;
-
             card.innerHTML= `
+            <a href="${open}">
             <div class="posterimage">
             <img src="${bposter}" alt="${name}" class="poster">
-            </div>
+            </div></a>
             <div class="rest_card">
                             <div class="cont">
                                 <h4>${name}</h4>
                                 <div class="sub">
-                                    <p>${genre}, ${date}</p>
-                                    <h3>${type}</h3>
-                                </div>
+                                <p>${genre}, ${date}, ${type}</p>
+                            </div>
+                            <div class="more"><a id="openmore" href="${open}"><i class="bi bi-play-circle"></i></a></div>
+                        </div>
                             </div>
                         </div>
         `
@@ -118,6 +119,7 @@ fetch(json_url).then(Response => Response.json())
     document.getElementsByTagName('video')[0].src = data[random_array].trailer;
     document.getElementsByTagName('video')[0].volume = 0.3;
     document.getElementsByClassName('rating')[0].innerText = data[random_array].rate;
+    document.getElementById('play_video').href = data[random_array].open;
     document.getElementById('det').innerText = data[random_array].detail;
     document.getElementById('gen').innerText = data[random_array].genre;
     document.getElementById('date').innerText = data[random_array].date;
@@ -127,7 +129,7 @@ fetch(json_url).then(Response => Response.json())
     const imageWrapper = document.querySelector('.alltypecards')
     const imageItems = document.querySelectorAll('.alltypecards > *')
     const imageLength = imageItems.length
-    const perView = 15
+    const perView = 0
     let totalScroll = 10
 
     imageWrapper.style.setProperty('--per-view', perView)
@@ -195,18 +197,6 @@ fetch(json_url).then(Response => Response.json())
                         search_user.style.visibility = "hidden";
                         search_user.style.opacity = 0;
                     }
-                }
-            })
-
-            // video play and pause
-
-            play.addEventListener('click', () => {
-                if (video.paused) {
-                    video.play();
-                    play.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="Hawkins-Icon Hawkins-Icon-Standard" data-name="Play"><path d="M4 2.69127C4 1.93067 4.81547 1.44851 5.48192 1.81506L22.4069 11.1238C23.0977 11.5037 23.0977 12.4963 22.4069 12.8762L5.48192 22.1849C4.81546 22.5515 4 22.0693 4 21.3087V2.69127Z" fill="currentColor"></path></svg><div class="space" style="width: 5px;"></div>Play';
-                } else {
-                    video.pause();
-                    play.innerHTML = '<span id="boot-icon" class="bi bi-pause-fill" style="font-size: 20px"></span><div class="space" style="width: 5px;"></div>Pause';
                 }
             })
 
@@ -288,7 +278,7 @@ fetch(json_url).then(Response => Response.json())
                 });
 
                 moviecards.forEach((ele, i) => {
-                    let { name, date, sposter, bposter, genre, type, url } = ele;
+                    let { name, date, open, bposter, genre, type, url } = ele;
                     let card = document.createElement('a');
                     card.classList.add('card');
                     card.href = url;
@@ -300,9 +290,10 @@ fetch(json_url).then(Response => Response.json())
                                     <div class="cont">
                                         <h4>${name}</h4>
                                         <div class="sub">
-                                            <p>${genre}, ${date}</p>
-                                            <h3>${type}</h3>
-                                        </div>
+                                        <p>${genre}, ${date}, ${type}</p>
+                                    </div>
+                                    <div class="more"><a id="openmore" href="${open}"><i class="bi bi-play-circle"></i></a></div>
+                                </div>
                                     </div>
                                 </div>
                 `
@@ -316,7 +307,7 @@ fetch(json_url).then(Response => Response.json())
                 });
 
                 seriescards.forEach((ele, i) => {
-                    let { name, date, sposter, bposter, genre, type, url } = ele;
+                    let { name, date, open, bposter, genre, type, url } = ele;
                     let card = document.createElement('a');
                     card.classList.add('card');
                     card.href = url;
@@ -328,9 +319,9 @@ fetch(json_url).then(Response => Response.json())
                                     <div class="cont">
                                         <h4>${name}</h4>
                                         <div class="sub">
-                                            <p>${genre}, ${date}</p>
-                                            <h3>${type}</h3>
-                                        </div>
+                                        <p>${genre}, ${date}, ${type}</p>
+                                    </div>
+                                    <div class="more"><a id="openmore" href="${open}"><i class="bi bi-play-circle"></i></a></div>                                </div>
                                     </div>
                                 </div>
                 `
