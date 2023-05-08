@@ -1,17 +1,19 @@
 [{
-    "name": "Ant Man",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/38/Ant-Man_%28Film%29_Logo.png",
-    "date": "2017",
-    "sposter": "img/ant man.jpg",
-    "bposter": "img/ant man1.jpg",
-    "genre": "Action, Comedy",
-    "trending": "",
+    "name": "Ant-Man and the Wasp: Quantumania",
+    "logo": "https://cdn.marvel.com/content/1x/antmanandthewaspquantumania_lob_log_def_03.png",
+    "date": "2023",
+    "sposter": "https://m.media-amazon.com/images/M/MV5BODZhNzlmOGItMWUyYS00Y2Q5LWFlNzMtM2I2NDFkM2ZkYmE1XkEyXkFqcGdeQXVyMTU5OTA4NTIz._V1_FMjpg_UX1000_.jpg",
+    "bposter": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/ant-man-and-the-wasp-quantumania-et00302402-1674555096.jpg",
+    "genre": "Adventure, Action",
+    "ownlogo": "https://www.freepnglogos.com/uploads/marvel-logo-png/new-marvel-studios-logo-debuted-marvelstudios-3.png",
+    "trending": "true",
+    "watch": "https://shrill-rice-301f.jedavi2095.workers.dev/stream/19692",
     "type": "movie",
-    "url": "ant man.html",
+    "url": "pages/ant man.html",
     "rate": "U/A 13+",
     "detail": "Ant-Man and the Wasp find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that pushes them beyond the limits of what they thought was possible.",
-    "trailer": "video/ant man trailer.mp4",
-    "open": "open/ant man play.html"
+    "trailer": "https://movietrailers.apple.com/movies/marvel/ant-man-and-the-wasp-quantumania/ant-man-and-the-wasp-quantumania-trailer-2_h480p.mov",
+    "open": "pages/open/ant man play.html"
 }, {
     "name": "Jurassic World Dominion",
     "logo": "https://www.themoviedb.org/t/p/original/ut0M6al21x1SfgZj9bxz9ZiUrPn.png",
@@ -19,13 +21,15 @@
     "sposter": "img/jurassic world.jpg",
     "bposter": "img/jurassic world1.jpg",
     "genre": "Action, Sci-Fi",
+    "ownlogo": "https://upload.wikimedia.org/wikipedia/commons/4/49/Universal_Pictures_logo_2.png",
     "trending": "true",
+    "watch": "",
     "type": "movie",
-    "url": "jurassic world.html",
+    "url": "pages/jurassic world.html",
     "rate": "U/A 12+",
     "detail": "Four years after the destruction of Isla Nublar, dinosaurs now live and hunt alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history's most fearsome creatures.",
     "trailer": "video/jurassic world trailer.mp4",
-    "open": "open/jurassic world play.html"
+    "open": "pages/open/jurassic world play.html"
 }, {
     "name": "Jumanji",
     "logo": "https://occ-0-3351-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABawHfaoyN9nhjeSUV9ITuTGjtXDcE0zwgOQAGmqhbl8xf5KZ07ot1sLUijHe_9ioDU66aTxR9_vrVvujtGcZBxEkqwuHaak0pra3K5LVeLs.webp?r=5d0",
@@ -33,13 +37,15 @@
     "sposter": "img/jumanji pt1.jpg",
     "bposter": "img/jumanji pt1(1).jpg",
     "genre": "Adventure, Comedy",
+    "ownlogo": "",
     "trending": "",
+    "watch": "",
     "type": "movie",
-    "url": "jumanji pt1.html",
+    "url": "pages/jumanji pt1.html",
     "rate": "U/A 12+",
     "detail": "When four students play with a magical video game, they are drawn to the jungle world of Jumanji, where they are trapped as their avatars. To return to the real world, they must finish the game.",
     "trailer": "video/jumanji pt1 trailer.mp4",
-    "open": "open/jumanji pt1 play.html"
+    "open": "pages/open/jumanji pt1 play.html"
 }, {
     "name": "Avengers",
     "logo": "https://www.freepnglogos.com/uploads/avengers-png-logo/avengers-logo-png-transparent-avengers-logo-images-7.png",
@@ -47,13 +53,15 @@
     "sposter": "img/avengers.jpg",
     "bposter": "img/avengers1.jpg",
     "genre": "Action, Superhero",
+    "ownlogo": "",
     "trending": "",
+    "watch": "",
     "type": "movie",
-    "url": "avengers.html",
+    "url": "pages/avengers.html",
     "rate": "U/A 12+",
     "detail": "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
     "trailer": "video/avengers trailer.mp4",
-    "open": "open/avengers play.html"
+    "open": "pages/open/avengers play.html"
 }, {
     "name": "Uncharted",
     "logo": "https://occ-0-3351-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABb0loYSZpmtv0o4NIXKIocow_Wiajk5wBRpe2W2B2lDEfDjM927PRv3kmk7_x-06nrJTc7K-1AiOl0yCiw7BcWYTt5hSZ8FG9CP0UafXjmI.webp?r=5ff",
@@ -61,13 +69,15 @@
     "sposter": "img/uncharted.webp",
     "bposter": "img/uncharted1.jpg",
     "genre": "Action, Adventure",
+    "ownlogo": "",
     "trending": "",
+    "watch": "",
     "type": "movie",
-    "url": "uncharted.html",
+    "url": "pages/uncharted.html",
     "rate": "U/A 13+",
     "detail": "Victor Sullivan recruits Nathan Drake to help him find the lost fortune of Ferdinand Magellan. However, they face competition from Santiago Moncada, who believes that the treasure belongs to him.",
     "trailer": "video/uncharted trailer.mp4",
-    "open": "open/uncharted play.html"
+    "open": "pages/open/uncharted play.html"
 }, {
     "name": "Shadow And Bone",
     "logo": "https://www.etonline.com/sites/default/files/styles/max_970x546/public/images/2020-12/unnamed_0.png?h=c66d06c9&itok=GlFPu_0F",
@@ -75,13 +85,31 @@
     "sposter": "img/shadow and bone s1(1).jpg",
     "bposter": "img/shadow and bone s1(2).jpg",
     "genre": "Novel, Fantasy",
+    "ownlogo": "",
     "trending": "true",
+    "watch": "",
     "type": "series",
-    "url": "shadow and bone s1.html",
+    "url": "pages/shadow and bone s1.html",
     "rate": "U/A 14+",
     "detail": "Sinister forces plot against a young soldier after she reveals a magical power that may unite her world.",
     "trailer": "video/shadow and bone s1 trailer.mp4",
-    "open": "open/shadow and bone s1 play.html"
+    "open": "pages/open/shadow and bone s1 play.html"
+}, {
+    "name": "The Conjuring",
+    "logo": "https://occ-0-3351-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABYp25NMQOF1GiGzsE60coeckcG-r6Ot_ZCk_36gX9cYitlW7ijMXlP_zB-9z4tZhAxNre58OjGPhPWcOccBMVCyjFVb-BIXm6boLFJDbp4E.webp?r=9b1",
+    "date": "2013",
+    "sposter": "https://m.media-amazon.com/images/I/61exLhGdsbL._SY679_.jpg",
+    "bposter": "https://rukminim1.flixcart.com/image/416/416/jcc9ci80/poster/n/a/e/medium-pl-wthe-conjuring-movie-wide-wall-poster-19-13-inches-original-imaetdv7zpzfhddg.jpeg?q=70",
+    "genre": "Horror, Thriller",
+    "ownlogo": "",
+    "trending": "false",
+    "watch": "",
+    "type": "movie",
+    "url": "pages/the conjuring.html",
+    "rate": "A",
+    "detail": "The Perron family moves into a farmhouse where they experience paranormal phenomena. They consult demonologists, Ed and Lorraine Warren, to help them get rid of the evil entity haunting them.",
+    "trailer": "https://imdb-video.media-imdb.com/vi3819874585/1434659607842-pgv4ql-1616202374858.mp4?Expires=1683462990&Signature=koGjI0a2j4BCl7MA2CdX3FqB1fR7ZAJHSFjz0XnvBDE4d8SADvwQqGNSNQ8SHUlOqvb9RSn3M-53~6k9UbyzbVd88M161KnDImMlxfJ9fdjTEfOzncIopfhyzvy8dcMvRLvwIfG1~lrq1hRQkNps4qkBzyecs96Aqp6PRe-EpyMbDfaKc19d4M98GM9Rh7Gl1vfcX8u2phTkWxNJ3-GRfPsWBA9Dp2~VMC~foysUgm6wF87RQV3Cr7Y-9tCvB9QY4eTiBJWw1As3cR9U8Pb2MtS1XsJ2JGpvReG5DALWIYXQH-QQ6VXaCHDC-pnlie5zxXuYyIi0kLu4Iq8OWBpCuA__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+    "open": "pages/open/the conjuring play.html"
 }, {
     "name": "Stranger Things",
     "logo": "https://occ-0-3351-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABSNUzoP8HHEMoUSYEp5GdQ92BwmUzjENlcVRytYB-9zH3CWjN1d3IEkLGjB8njlIALYjHH8NG9eT0k876YHi9_JtUIJCaG9ZXHcEC26sYbfa-GlUN6Xyuvg5dqpkUDPvoUvTLYssGgkv0YErnLL1LEzancT6V39BpxajPFO7uP1Q_SpE-D4E.webp?r=23b",
@@ -89,13 +117,15 @@
     "sposter": "img/stranger things s1(1).jpg",
     "bposter": "img/stranger things s1(2).jpg",
     "genre": "Horror, Supernatural",
+    "ownlogo": "",
     "trending": "true",
+    "watch": "",
     "type": "series",
-    "url": "stranger things s1.html",
+    "url": "pages/stranger things s1.html",
     "rate": "U/A 14+",
     "detail": "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.",
     "trailer": "video/stranger things s1 trailer.mp4",
-    "open": "open/stranger things s1 play.html"
+    "open": "pages/open/stranger things s1 play.html"
 }, {
     "name": "Top Gun",
     "logo": "https://1000logos.net/wp-content/uploads/2022/11/Top-Gun-Logo-500x281.png",
@@ -103,13 +133,15 @@
     "sposter": "img/topgun.jpg",
     "bposter": "img/topgun1.jpg",
     "genre": "Action, Romance",
+    "ownlogo": "",
     "trending": "",
+    "watch": "",
     "type": "movie",
-    "url": "top gun.html",
+    "url": "pages/top gun.html",
     "rate": "U/A 13+",
     "detail": "Top Gun is a 1986 American action film directed by Tony Scott, produced by Don Simpson and Jerry Bruckheimer, with distribution by Paramount Pictures.",
     "trailer": "video/top gun trailer.mp4",
-    "open": "open/top gun play.html"
+    "open": "pages/open/top gun play.html"
 }, {
     "name": "Squid Game",
     "logo": "https://1000logos.net/wp-content/uploads/2022/05/Squid-Game-Logo.png",
@@ -117,13 +149,15 @@
     "sposter": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2fBmk4nJCimGwqsQoQ36oUaj_OMbxeqjFtVllaBkd&s",
     "bposter": "https://staticg.sportskeeda.com/editor/2022/06/eedc8-16552727213059-1920.jpg",
     "genre": "Thriller",
+    "ownlogo": "",
     "trending": "true",
+    "watch": "",
     "type": "series",
-    "url": "squid game.html",
-    "rate": "U/A 13+",
+    "url": "pages/squid game.html",
+    "rate": "A",
     "detail": "Hundreds of cash-strapped contestants accept an invitation to compete in children's games for a tempting prize, but the stakes are deadly.",
     "trailer": "video/squid game trailer.mp4",
-    "open": "open/squid game play.html"
+    "open": "pages/open/squid game play.html"
 }, {
     "name": "Thor Love And Thunder",
     "logo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/846a9086-8a40-43e0-aa10-2fc7d6d73730/deaml8h-951ead38-2ff8-4206-9cb5-3744b808bf21.png/v1/fill/w_1239,h_645/thor_love_and_thunder_logo_png__by_mintmovi3_deaml8h-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjY3IiwicGF0aCI6IlwvZlwvODQ2YTkwODYtOGE0MC00M2UwLWFhMTAtMmZjN2Q2ZDczNzMwXC9kZWFtbDhoLTk1MWVhZDM4LTJmZjgtNDIwNi05Y2I1LTM3NDRiODA4YmYyMS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.7DBam_C7z2gWAgOK_NaXnsim30zdxNz1WhOGiwzWDpg",
@@ -131,13 +165,15 @@
     "sposter": "img/thor love of thunder.jpg",
     "bposter": "img/thor love of thunder1.avif",
     "genre": "Action, Superhero",
+    "ownlogo": "",
     "trending": "true",
+    "watch": "",
     "type": "movie",
-    "url": "thor love and thunder.html",
+    "url": "pages/thor love and thunder.html",
     "rate": "U/A 13+",
     "detail": "Thor embarks on a journey unlike anything he's ever faced -- a quest for inner peace. However, his retirement gets interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods.",
     "trailer": "video/thor love and thunder trailer.mp4",
-    "open": "open/thor love and thunder play.html"
+    "open": "pages/open/thor love and thunder play.html"
 }, {
     "name": "Moon Knight",
     "logo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a58a7719-0dcf-4e0b-b7bb-d2b725dbbb8e/df2rgzf-b8ebf0ff-80dd-453f-8309-3ab820b2a3f3.png/v1/fill/w_1193,h_670/moon_knight_logo_png_hd_2022_by_andrewvm_df2rgzf-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjkyIiwicGF0aCI6IlwvZlwvYTU4YTc3MTktMGRjZi00ZTBiLWI3YmItZDJiNzI1ZGJiYjhlXC9kZjJyZ3pmLWI4ZWJmMGZmLTgwZGQtNDUzZi04MzA5LTNhYjgyMGIyYTNmMy5wbmciLCJ3aWR0aCI6Ijw9MTIzMiJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.TiFPo2dlxQe22d3_R3_q_dmmz2J-MXyhNd0rja4hiqY",
@@ -145,13 +181,15 @@
     "sposter": "img/moon knight.jpg",
     "bposter": "img/moon knight1.webp",
     "genre": "Action",
+    "ownlogo": "",
     "trending": "",
+    "watch": "",
     "type": "series",
-    "url": "moon knight.html",
+    "url": "pages/moon knight.html",
     "rate": "U/A 16+",
     "detail": "Steven Grant and mercenary Marc Spector investigate the mysteries of the Egyptian gods from inside the same body.",
-    "trailer": "video/john wick trailer.mp4",
-    "open": "open/moon knight play.html"
+    "trailer": "Not",
+    "open": "pages/open/moon knight play.html"
 }, {
     "name": "Kota Factory",
     "logo": "https://occ-0-3351-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABYKs7b-Qv-EEDwWEqdY7r7AkuUur-xkb6GRezxO4WE0VoPJ2YumBsWuo1AuNG0IawM7lBreLA4oOryVuM6zbD3Y3WE6ZjT4T2n2TlPz7fkpK4buWQw-fJ2l_Yrhf-MWaIlDG3iokzIqSd9QYGtEcyQ2WW1OnOLl4m-WPAMOB9JkDGxjuQcId.webp?r=20b",
@@ -159,27 +197,15 @@
     "sposter": "img/kota factory.jpg",
     "bposter": "img/kota factory1.webp",
     "genre": "Action",
+    "ownlogo": "",
     "trending": "true",
+    "watch": "",
     "type": "series",
-    "url": "kota factory.html",
+    "url": "pages/kota factory.html",
     "rate": "U/A 13+",
     "detail": "Like many students from across India, Vaibhav comes to Kota to prepare for JEE and NEET. Along with his friends, he navigates campus life and works hard to get into IIT.",
     "trailer": "video/kota factory trailer.mp4",
-    "open": "open/kota factory play.html"
-}, {
-    "name": "Eternals",
-    "logo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/846a9086-8a40-43e0-aa10-2fc7d6d73730/ddcgjs7-2b2969b0-3386-4aff-a1a4-2e44aa633300.png/v1/fill/w_1280,h_570/marvel_studios__eternals__2021__logo_png__2_by_mintmovi3_ddcgjs7-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTcwIiwicGF0aCI6IlwvZlwvODQ2YTkwODYtOGE0MC00M2UwLWFhMTAtMmZjN2Q2ZDczNzMwXC9kZGNnanM3LTJiMjk2OWIwLTMzODYtNGFmZi1hMWE0LTJlNDRhYTYzMzMwMC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.HIzA22EIqRbseOKcA17tVaHE8SB9N1U9ZaOHKa-9x4s",
-    "date": "2022",
-    "sposter": "img/eternals.jpg",
-    "bposter": "img/eternals1.webp",
-    "genre": "Action",
-    "trending": "",
-    "type": "movie",
-    "url": "eternals.html",
-    "rate": "U/A 13+",
-    "detail": "The Eternals, a race of immortal beings with superhuman powers who have secretly lived on Earth for thousands of years, reunite to battle the evil Deviants.",
-    "trailer": "video/john wick trailer.mp4",
-    "open": "open/eternals play.html"
+    "open": "pages/open/kota factory play.html"
 }, {
     "name": "Spider Man : No Way Home",
     "logo": "https://image.tmdb.org/t/p/original/dEFxlY8tBr3MfcofIJKzqQKVe6B.png",
@@ -187,26 +213,29 @@
     "sposter": "img/spiderman.jpg",
     "bposter": "img/spiderman1.jpg",
     "genre": "Action",
+    "ownlogo": "",
     "trending": "true",
+    "watch": "",
     "type": "movie",
-    "url": "spiderman.html",
+    "url": "pages/spiderman.html",
     "rate": "U/A 13+",
     "detail": "Spider-Man seeks the help of Doctor Strange to forget his exposed secret identity as Peter Parker. However, Strange's spell goes horribly wrong, leading to unwanted guests entering their universe.",
-    "trailer": "video/john wick trailer.mp4",
-    "open": "open/spiderman play.html"
-}, 
- {
+    "trailer": "Not",
+    "open": "pages/open/spiderman play.html"
+}, {
     "name": "Money Heist",
     "logo": "https://occ-0-3351-2164.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABbVBZZI4ewNxMH5D6oTe7AiwHg0WjmMUwC7nJ0w2SFZO2YWN7BXiEu6BV80gef6qcE0rT65M2UP7TGdKroEWmGZg7W1wxug75fMpQrCx68G2rIyXtoYE_F6ea_OrDddy_KtGDvt0Lx7dekH-AQRoAtH8vCKeXyMYSIfSH7iBXdPn1D8cSj1o.webp?r=768",
     "date": "2020",
     "sposter": "img/money heist.jpg",
     "bposter": "img/money heist1.jpg",
     "genre": "Action",
+    "ownlogo": "",
     "trending": "true",
+    "watch": "",
     "type": "series",
-    "url": "money heist.html",
+    "url": "pages/money heist.html",
     "rate": "A",
     "detail": "A criminal mastermind who goes by The Professor has a plan to pull off the biggest heist in recorded history -- to print billions of euros in the Royal Mint of Spain.",
     "trailer": "video/Money Heist Trailer.mp4",
-    "open": "open/Money Heist play.html"
+    "open": "pages/open/Money Heist play.html"
 }]
