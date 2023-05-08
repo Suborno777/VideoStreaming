@@ -2532,7 +2532,7 @@ header section:hover .seriestype .bi-chevron-left {
         top: -90.8%;
     }
 }
-@media screen and (max-width: 556px){
+@media screen and (max-width: 1500px){
     body {
         height: 100vh;
     }
