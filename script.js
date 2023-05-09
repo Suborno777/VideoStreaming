@@ -7,7 +7,7 @@ const userIcons = () => {
     users.reverse();
     users.map((curElem) => {
         memberDiv.insertAdjacentHTML('afterbegin', `
-        <button class="btn" onclick='transitionToPage("/browse")'><span>${curElem}</span></button>
+        <button class="btn" onclick='transitionToPage("/browse.html")'><span>${curElem}</span></button>
         `);
     })
 };
