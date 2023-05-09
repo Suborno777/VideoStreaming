@@ -12,7 +12,7 @@
     "url": "pages/ant man.html",
     "rate": "U/A 13+",
     "detail": "Ant-Man and the Wasp find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that pushes them beyond the limits of what they thought was possible.",
-    "trailer": "https://movietrailers.apple.com/movies/marvel/ant-man-and-the-wasp-quantumania/ant-man-and-the-wasp-quantumania-trailer-2_h480p.mov",
+    "trailer": "Not",
     "open": "pages/open/ant man play.html"
 }, {
     "name": "Jurassic World Dominion",
@@ -230,7 +230,7 @@
     "bposter": "img/money heist1.jpg",
     "genre": "Action",
     "ownlogo": "",
-    "trending": "false",
+    "trending": "true",
     "watch": "",
     "type": "series",
     "url": "pages/money heist.html",
